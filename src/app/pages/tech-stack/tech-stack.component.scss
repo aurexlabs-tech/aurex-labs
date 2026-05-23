@@ -1,0 +1,22 @@
+:host {
+  display: block;
+}
+
+/* Moves the track from 0 to -50%. 
+  Because we duplicated the items in the HTML, 
+  50% is the exact width of one set of items, creating a seamless loop.
+*/
+.animate-marquee {
+  animation: marquee 35s linear infinite;
+  will-change: transform;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
