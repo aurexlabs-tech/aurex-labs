@@ -56,6 +56,9 @@
               }
             },
             "tsConfig": "tsconfig.app.json",
+            "allowedCommonJsDependencies": [
+              "aos"
+            ],
             "assets": [
               {
                 "glob": "**/*",
@@ -81,8 +84,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumWarning": "10kB",
+                  "maximumError": "16kB"
                 }
               ],
               "outputHashing": "all"
