@@ -6,11 +6,12 @@ import { ProjectsComponent } from '../projects/projects.component';
 import { TestimonialsComponent } from '../../components/testimonials/testimonials.component';
 import { WhyChooseUsComponent } from '../../components/why-choose-us/why-choose-us.component';
 import { ProcessComponent } from '../../components/process/process.component';
+import { ServicesComponent } from '../services/services.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HeroComponent, WhyChooseUsComponent, ProjectsComponent, TestimonialsComponent, CtaComponent, ProcessComponent],
+  imports: [CommonModule, HeroComponent, WhyChooseUsComponent, ProjectsComponent, TestimonialsComponent, CtaComponent, ProcessComponent, ServicesComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
