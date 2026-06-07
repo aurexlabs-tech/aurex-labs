@@ -13,9 +13,9 @@ export class TestimonialsComponent implements OnInit {
   readonly reviews = [
     {
       quote: "AurexLabs completely transformed our internal operations. The custom dashboard they built using Angular is incredibly fast and intuitive. Highly professional team.",
-      name: "Sarah Jenkins",
-      role: "Operations Director",
-      initials: "SJ"
+      name: "Sri Ram",
+      role: "CEO, StarVibes Studio",
+      initials: "SR"
     },
     {
       quote: "Finding developers who actually understand business constraints is rare. They delivered a scalable E-commerce backend right on schedule.",

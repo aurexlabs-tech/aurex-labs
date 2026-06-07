@@ -1,0 +1,73 @@
+<section id="process" class="process-section relative py-14 overflow-hidden">
+  <!-- Background -->
+  <div class="absolute inset-0 section-light"></div>
+  <div class="absolute inset-0 dot-grid-light opacity-30"></div>
+  <div
+    class="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#2563EB]/[0.03] rounded-full blur-[120px]">
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <!-- Header -->
+    <div class="text-center max-w-2xl mx-auto mb-20 lg:mb-24" data-aos="fade-up">
+      <p class="text-xs font-semibold tracking-[0.25em] uppercase mb-4">
+        Our Process
+      </p>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0B0F19] tracking-tight mb-5">
+        How we <span class="font-serif italic gradient-text font-medium">build</span>
+      </h2>
+      <p class="text-lg leading-relaxed" style="color: #000">
+        A streamlined, transparent development process designed to deliver scalable software on time
+        and within scope.
+      </p>
+    </div>
+
+    <!-- Timeline -->
+    <div class="flex flex-col lg:flex-row gap-6 relative">
+      <!-- Connection Line (Desktop) -->
+      <div class="hidden lg:block absolute top-[37px] left-[calc(12.5%+24px)] right-[calc(12.5%+24px)] h-[2px]">
+        <div class="w-full h-full bg-gradient-to-r from-[#2563EB]/20 via-[#00D9FF]/30 to-[#2563EB]/20 rounded-full">
+        </div>
+        <!-- Traveling Dot -->
+        <div class="absolute top-[-3px] w-2 h-2 rounded-full bg-[#00D9FF] shadow-[0_0_10px_rgba(0,217,255,0.6)]"
+          style="animation: line-travel 4s ease-in-out infinite"></div>
+      </div>
+
+      <!-- Steps -->
+      <div *ngFor="let step of steps; let i = index" class="flex-1 flex flex-col items-center relative"
+        [attr.data-aos]="'fade-up'" [attr.data-aos-delay]="i * 150" style="min-width: 0;">
+        <!-- Node -->
+        <div class="relative mb-8 z-10">
+          <!-- Pulse Ring -->
+          <div class="absolute inset-0 w-[72px] h-[72px] rounded-full border-2 border-[#2563EB]/20"
+            style="animation: pulse-ring 3s ease-out infinite; animation-delay: {{ i * 0.8 }}s"></div>
+
+          <!-- Outer Ring -->
+          <div
+            class="w-[72px] h-[72px] rounded-full bg-white border-[3px] border-[#EEF2FF] flex items-center justify-center shadow-[0_8px_30px_rgba(37,99,235,0.1)]">
+            <!-- Inner Circle -->
+            <div
+              class="w-12 h-12 rounded-full bg-gradient-to-br from-[#2563EB] to-[#00D9FF] flex items-center justify-center shadow-[0_4px_15px_rgba(37,99,235,0.3)]">
+              <lucide-icon [img]="step.icon" class="w-5 h-5 text-white"></lucide-icon>
+            </div>
+          </div>
+        </div>
+
+        <!-- Connection Line (Mobile) -->
+        <div *ngIf="i < steps.length - 1"
+          class="lg:hidden w-[2px] h-8 bg-gradient-to-b from-[#2563EB]/20 to-[#00D9FF]/20 -mt-4 mb-4"></div>
+
+        <!-- Card -->
+        <div
+          class="w-full flex-1 p-7 lg:p-8 rounded-[1.75rem] bg-white border border-gray-100/80 hover:border-[#2563EB]/15 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_60px_-15px_rgba(37,99,235,0.1)] text-center lg:text-left">
+          <div class="text-[11px] font-bold text-[#2563EB]/50 tracking-[0.2em] uppercase mb-3">
+            Step 0{{ i + 1 }}
+          </div>
+          <h3 class="text-xl font-bold text-[#0B0F19] mb-3 tracking-tight">{{ step.title }}</h3>
+          <p class="text-sm leading-relaxed" style="color: #000 !important">
+            {{ step.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

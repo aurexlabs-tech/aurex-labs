@@ -1,21 +1,17 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
-import { provideRouter, withComponentInputBinding, withInMemoryScrolling, withViewTransitions } from '@angular/router';
+import { ApplicationConfig } from '@angular/core';
+import { provideRouter, withViewTransitions, withInMemoryScrolling } from '@angular/router';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { provideHttpClient, withFetch } from '@angular/common/http';
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(
       routes,
-      withComponentInputBinding(),
-      withInMemoryScrolling({
-        scrollPositionRestoration: 'top',
-        anchorScrolling: 'enabled'
-      })
+      // 1. Enables native smooth morphing between pages
+      withViewTransitions(),
+      // 2. Ensures the page scrolls back to the top when navigating to a new route
+      withInMemoryScrolling({ scrollPositionRestoration: 'top' })
     ),
-    provideAnimationsAsync(),
-    provideHttpClient(withFetch())
+    provideAnimationsAsync()
   ]
 };

@@ -1,0 +1,75 @@
+<footer class="bg-brand-white px-4 pb-6 pt-12 md:px-8">
+  <div
+    class="max-w-7xl mx-auto bg-white rounded-[2.5rem] border border-white p-8 md:p-12 lg:p-16 relative overflow-hidden shadow-premium flex flex-col z-10"
+  >
+    <div
+      class="absolute inset-0 bg-gradient-to-br from-blue-50/90 via-transparent to-brand-cyan/10 pointer-events-none z-0"
+    ></div>
+    <div
+      class="absolute -top-24 -right-24 w-96 h-96 bg-brand-blue/10 rounded-full blur-[80px] pointer-events-none z-0"
+    ></div>
+
+    <div
+      class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12 relative z-10 mb-16"
+    >
+      <div class="max-w-md">
+        <a routerLink="/" class="flex items-center gap-3 mb-6 group w-fit">
+          <img
+            src="assets/img/A-logo.png"
+            alt="AurexLabs Logo"
+            class="w-10 h-10 rounded-xl object-contain bg-white shadow-sm border border-gray-100 p-0.5 group-hover:scale-105 transition-transform duration-300"
+          />
+          <span class="text-2xl font-bold tracking-tight text-brand-navy">AurexLabs</span>
+        </a>
+        <p class="text-gray-600 leading-relaxed text-lg font-medium">
+          Engineering scalable digital products and enterprise solutions with precision and purpose.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap gap-3 lg:justify-end">
+        <a
+          routerLink="/services"
+          class="px-5 py-2.5 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200/80 text-gray-700 text-sm font-medium hover:border-brand-blue/30 hover:bg-blue-50/50 hover:text-brand-blue transition-all duration-300 shadow-sm"
+          >Services</a
+        >
+        <a
+          routerLink="/work"
+          class="px-5 py-2.5 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200/80 text-gray-700 text-sm font-medium hover:border-brand-blue/30 hover:bg-blue-50/50 hover:text-brand-blue transition-all duration-300 shadow-sm"
+          >Work</a
+        >
+        <a
+          routerLink="/about"
+          class="px-5 py-2.5 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200/80 text-gray-700 text-sm font-medium hover:border-brand-blue/30 hover:bg-blue-50/50 hover:text-brand-blue transition-all duration-300 shadow-sm"
+          >About</a
+        >
+
+        <a
+          href="mailto:hello@aurexlabs.com"
+          class="px-6 py-2.5 rounded-full bg-gradient-to-r from-brand-blue to-brand-cyan text-white text-sm font-bold hover:shadow-glow hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2"
+        >
+          hello&#64;aurexlabs.com
+        </a>
+      </div>
+    </div>
+
+    <div
+      class="w-full h-px bg-gradient-to-r from-transparent via-blue-900/10 to-transparent relative z-10 mb-8"
+    ></div>
+
+    <div class="flex flex-col md:flex-row justify-between items-center gap-6 relative z-10">
+      <div
+        class="flex flex-wrap items-center justify-center gap-3 text-gray-500 text-sm font-medium"
+      >
+        <span>&copy; {{ currentYear }} AurexLabs.</span>
+        <span class="hidden sm:inline text-gray-300">&middot;</span>
+        <a href="#" class="hover:text-brand-blue transition-colors duration-300">Privacy Policy</a>
+        <span class="hidden sm:inline text-gray-300">&middot;</span>
+        <a href="#" class="hover:text-brand-blue transition-colors duration-300"
+          >Terms of Service</a
+        >
+      </div>
+
+      <div class="flex gap-3"></div>
+    </div>
+  </div>
+</footer>

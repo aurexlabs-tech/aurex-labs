@@ -1,66 +1,50 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LucideAngularModule, ExternalLink, ArrowRight } from 'lucide-angular';
+import { RouterModule } from '@angular/router';
+import { LucideAngularModule, ExternalLink, ArrowRight, Clapperboard, CakeSlice, HeartPulse, CircleCheck } from 'lucide-angular';
 import * as AOS from 'aos';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, LucideAngularModule],
+  imports: [CommonModule, RouterModule, LucideAngularModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent implements OnInit {
-  readonly projects = [
+  @Input() limit?: number;
+  @Input() showHeader: boolean = true;
+
+  // Lucide icon references for template binding
+  readonly ClapperboardIcon = Clapperboard;
+  readonly CakeSliceIcon = CakeSlice;
+  readonly HeartPulseIcon = HeartPulse;
+  readonly ExternalLinkIcon = ExternalLink;
+  readonly CircleCheckIcon = CircleCheck;
+  readonly ArrowRightIcon = ArrowRight;
+
+  readonly allProjects = [
     {
-      title: 'EduCore Management Platform',
-      description: 'A comprehensive school management system handling admissions, grading, and parent-teacher communications at scale.',
-      tags: ['Angular', 'Node.js', 'MSSQL'],
-      accent: '#2563EB',
-      accentLight: 'rgba(37,99,235,0.15)',
-      chartHeights: ['40%', '60%', '80%', '50%', '70%', '95%', '55%', '75%'],
-      metric1: '15.2k',
-      metric2: '99.1%',
-      metricLabel1: 'Students',
-      metricLabel2: 'Uptime'
+      title: 'Star Vibes Studio',
+      problem: 'The client required a premium, high-performance visual experience to capture leads and showcase their cinematic portfolio.',
+      solution: 'Engineered a modern, highly visual frontend architecture optimized for asset delivery and smooth performance.',
+      impact: 'Delivered a deeply immersive user journey that maximizes lead generation and premium studio bookings.',
+      tags: ['Angular', 'Cinematic UI', 'Lead Generation'],
+      imageUrl: 'assets/img/projects/star-vibes.png',
     },
     {
-      title: 'HealthSync Dashboard',
-      description: 'An internal hospital administrative dashboard for real-time patient tracking and resource allocation.',
-      tags: ['Angular', 'Express', 'MySQL'],
-      accent: '#10b981',
-      accentLight: 'rgba(16,185,129,0.15)',
-      chartHeights: ['55%', '75%', '65%', '90%', '45%', '85%', '70%', '60%'],
-      metric1: '3.8k',
-      metric2: '97.5%',
-      metricLabel1: 'Patients',
-      metricLabel2: 'Accuracy'
-    },
-    {
-      title: 'Aura E-Commerce Admin',
-      description: 'A centralized inventory and order management platform for a high-volume direct-to-consumer brand.',
-      tags: ['Angular', 'REST API', 'Tailwind'],
-      accent: '#8b5cf6',
-      accentLight: 'rgba(139,92,246,0.15)',
-      chartHeights: ['70%', '50%', '85%', '60%', '95%', '45%', '80%', '65%'],
-      metric1: '$2.4M',
-      metric2: '12.5k',
-      metricLabel1: 'Revenue',
-      metricLabel2: 'Orders'
-    },
-    {
-      title: 'Nexis AI Assistant',
-      description: 'A custom LLM-powered support bot integrated directly into a client CRM to automate initial customer inquiries.',
-      tags: ['Angular', 'AI Integration', 'Node.js'],
-      accent: '#00D9FF',
-      accentLight: 'rgba(0,217,255,0.15)',
-      chartHeights: ['60%', '80%', '55%', '70%', '90%', '65%', '85%', '75%'],
-      metric1: '40%',
-      metric2: '24/7',
-      metricLabel1: 'Reduction',
-      metricLabel2: 'Uptime'
+      title: 'Lisa Bakes E-Commerce',
+      problem: 'A growing digital bakery needed a scalable storefront with streamlined inventory management and checkout flows.',
+      solution: 'Built a full-stack e-commerce environment with a strict Git version control setup for continuous, reliable deployment.',
+      impact: 'Modernized the checkout flow, significantly reducing cart abandonment and streamlining the daily fulfillment of orders.',
+      tags: ['Angular', 'E-commerce', 'Git Workflow'],
+      imageUrl: 'assets/img/projects/lisa-bakes.png',
     }
   ];
+
+  get displayedProjects() {
+    return this.limit ? this.allProjects.slice(0, this.limit) : this.allProjects;
+  }
 
   ngOnInit() {
     AOS.init({ once: true, offset: 50 });

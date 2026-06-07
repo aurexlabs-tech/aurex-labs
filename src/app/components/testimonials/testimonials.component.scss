@@ -1,0 +1,121 @@
+:host {
+  display: block;
+}
+
+.testimonials-section {
+  background-color: #F8FAFC;
+}
+
+.background-glow {
+  background: linear-gradient(to bottom right, rgba(37, 99, 235, 0.05), rgba(0, 217, 255, 0.05));
+  border-radius: 9999px;
+  filter: blur(100px);
+}
+
+.badge {
+  border-radius: 9999px;
+  background-color: #ffffff;
+  border: 1px solid #dbeafe;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
+  .badge-dot {
+    border-radius: 9999px;
+    background-color: #2563EB;
+  }
+
+  .badge-text {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #2563eb;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+  }
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #0B0F19;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+
+  @media (min-width: 768px) {
+    font-size: 3rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 3.5rem;
+  }
+
+  .section-title-highlight {
+    font-family: serif;
+    font-style: italic;
+    font-weight: 500;
+  }
+}
+
+.review-card {
+  background-color: #ffffff;
+  border-radius: 2rem;
+  border: 1px solid #f3f4f6;
+  box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.04);
+  transition: all 0.5s ease;
+
+  .star-rating {
+    color: #2563EB;
+    transition: color 0.5s ease;
+
+    .star-icon {
+      fill: currentColor;
+    }
+  }
+
+  .review-quote {
+    font-size: 1.15rem;
+    font-family: serif;
+    font-style: italic;
+    line-height: 1.625;
+    color: #000;
+    transition: color 0.5s ease;
+  }
+
+  .review-author {
+    border-color: #eff6ff;
+    transition: border-color 0.5s ease;
+
+    .author-avatar {
+      border-radius: 9999px;
+      background: linear-gradient(to bottom right, #2563EB, #00D9FF);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.875rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      transition: all 0.5s ease;
+    }
+
+    .author-name {
+      font-weight: 700;
+      color: #0B0F19;
+      letter-spacing: -0.025em;
+    }
+
+    .author-role {
+      font-size: 10px;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-weight: 700;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.12);
+    border-color: #dbeafe;
+
+    .review-author {
+      .author-avatar {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

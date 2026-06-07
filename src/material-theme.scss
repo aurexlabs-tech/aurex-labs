@@ -2,35 +2,17 @@
 
 html {
   height: 100%;
-  @include mat.theme(
-    (
-      color: (
-        primary: mat.$azure-palette,
-        tertiary: mat.$cyan-palette,
-      ),
-      typography: Inter,
-      density: 0,
-    )
-  );
-}
 
-// Dark theme overrides when .dark-theme is applied
-html.dark-theme {
-  @include mat.theme(
-    (
-      color: (
-        primary: mat.$cyan-palette,
-        tertiary: mat.$azure-palette,
-        theme-type: dark,
-      ),
-      typography: Inter,
-      density: 0,
-    )
-  );
+  /* Modern Material 3 API for Angular v21 */
+  @include mat.theme((color: (primary: mat.$azure-palette,
+        tertiary: mat.$cyan-palette,
+        theme-type: light),
+      typography: 'Sora, sans-serif',
+      density: 0));
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Sora', sans-serif;
   margin: 0;
   height: 100%;
 }

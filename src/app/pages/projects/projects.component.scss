@@ -1,3 +1,326 @@
 :host {
   display: block;
 }
+
+.projects-section {
+  padding: 75px 24px;
+
+  @media (max-width: 640px) {
+    padding: 48px 16px;
+  }
+}
+
+.projects-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 64px;
+
+  @media (max-width: 640px) {
+    margin-bottom: 40px;
+  }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================
+   PROJECT CARD — Light Theme
+   ============================ */
+.project-card {
+  background: #ffffff;
+  border: 1px solid rgba(11, 15, 25, 0.06);
+  border-radius: 1.75rem;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.02) 0%, rgba(0, 217, 255, 0.02) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+  }
+
+  &:hover {
+    border-color: rgba(37, 99, 235, 0.15);
+    box-shadow:
+      0 20px 60px -15px rgba(37, 99, 235, 0.1),
+      0 8px 24px -8px rgba(0, 0, 0, 0.04);
+    transform: translateY(-4px);
+
+    &::before {
+      opacity: 1;
+    }
+
+    .preview-img {
+      transform: scale(1.05);
+    }
+
+    .project-icon-wrap {
+      box-shadow: 0 8px 24px -4px rgba(37, 99, 235, 0.25);
+      transform: scale(1.05);
+    }
+  }
+
+  @media (max-width: 640px) {
+    padding: 24px;
+    border-radius: 1.5rem;
+  }
+}
+
+/* --- Image Preview --- */
+.project-preview {
+  width: 100%;
+  height: 220px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  position: relative;
+  border: 1px solid rgba(11, 15, 25, 0.06);
+  background: #F8FAFC;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 50%, rgba(255, 255, 255, 0.9) 100%);
+    pointer-events: none;
+  }
+
+  @media (max-width: 640px) {
+    height: 180px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+  }
+}
+
+.preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Header Row (Icon + Links) --- */
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+  @media (max-width: 640px) {
+    margin-bottom: 16px;
+  }
+}
+
+.project-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #0B0F19 0%, #1e293b 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media (max-width: 640px) {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+  }
+}
+
+.project-icon-svg {
+  width: 22px;
+  height: 22px;
+  color: #ffffff;
+
+  @media (max-width: 640px) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* --- Live Site Link Button --- */
+.project-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  transition: all 0.3s ease;
+  letter-spacing: 0.01em;
+  color: #2563EB;
+  background: rgba(37, 99, 235, 0.05);
+}
+
+
+/* --- Title --- */
+.project-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0B0F19;
+  letter-spacing: -0.02em;
+
+  @media (max-width: 640px) {
+    font-size: 1.2rem;
+  }
+}
+
+/* --- Description --- */
+.project-desc {
+  color: #64748b;
+  font-size: 0.88rem;
+  line-height: 1.75;
+  margin-bottom: 20px;
+
+  @media (max-width: 640px) {
+    font-size: 0.84rem;
+    margin-bottom: 16px;
+  }
+}
+
+/* --- Feature List --- */
+.project-features {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #475569;
+  font-size: 0.84rem;
+  font-weight: 500;
+  line-height: 1.55;
+
+  @media (max-width: 640px) {
+    font-size: 0.8rem;
+  }
+}
+
+.feature-icon-svg {
+  color: #2563EB;
+  margin-top: 2px;
+}
+
+/* --- Tech Tags --- */
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid rgba(11, 15, 25, 0.05);
+}
+
+.tech-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  padding: 5px 12px;
+  border-radius: 8px;
+  color: #2563EB;
+  background: rgba(37, 99, 235, 0.05);
+  border: 1px solid rgba(37, 99, 235, 0.1);
+  letter-spacing: 0.02em;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(37, 99, 235, 0.08);
+    border-color: rgba(37, 99, 235, 0.2);
+  }
+}
+
+/* --- Priority Card Accent --- */
+.priority-card {
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #2563EB, #00D9FF, transparent);
+    opacity: 0.6;
+    transition: opacity 0.4s ease;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+/* --- Category Titles --- */
+.category-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #0B0F19;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(11, 15, 25, 0.06);
+  letter-spacing: -0.02em;
+
+  .category-icon {
+    font-size: 28px;
+    color: #2563EB;
+    background: rgba(37, 99, 235, 0.08);
+    padding: 8px;
+    border-radius: 10px;
+  }
+
+  &.professional-category {
+    margin-top: 80px;
+
+    .category-icon {
+      color: #0B0F19;
+      background: rgba(11, 15, 25, 0.06);
+    }
+  }
+
+  @media (max-width: 640px) {
+    font-size: 1.4rem;
+    margin-bottom: 24px;
+
+    .category-icon {
+      font-size: 24px;
+      padding: 6px;
+    }
+
+    &.professional-category {
+      margin-top: 56px;
+    }
+  }
+}
