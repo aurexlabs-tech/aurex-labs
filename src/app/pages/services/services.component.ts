@@ -11,6 +11,7 @@ import * as AOS from 'aos';
   styleUrl: './services.component.scss'
 })
 export class ServicesComponent implements OnInit {
+  readonly ArrowRight = ArrowRight;
   readonly services = [
     {
       title: 'Web Application Development',

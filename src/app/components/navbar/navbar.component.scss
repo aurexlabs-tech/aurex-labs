@@ -13,6 +13,11 @@
   border-radius: 9999px;
   transition: all 0.3s ease;
   z-index: 1;
+  /* Button reset */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 
   /* Soft blue capsule hover effect */
   &::before {
@@ -41,6 +46,8 @@
 
 .mobile-nav-link {
   display: block;
+  width: 100%;
+  text-align: left;
   padding: 0.875rem 1.25rem;
   font-size: 1rem;
   font-weight: 500;
@@ -48,6 +55,11 @@
   text-decoration: none;
   border-radius: 1rem;
   transition: all 0.3s ease;
+  /* Button reset */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 
   &:hover {
     color: #2563EB;

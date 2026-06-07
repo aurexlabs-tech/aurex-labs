@@ -11,9 +11,10 @@
     <div class="hidden md:block w-px h-5 bg-gray-200/60"></div>
 
     <div class="hidden md:flex items-center gap-1 px-4">
-      <a routerLink="/services" routerLinkActive="!text-brand-blue font-bold" class="nav-link">Services</a>
-      <a routerLink="/work" routerLinkActive="!text-brand-blue font-bold" class="nav-link">Work</a>
-      <a routerLink="/about" routerLinkActive="!text-brand-blue font-bold" class="nav-link">About</a>
+      <button (click)="scrollToSection('services')" class="nav-link">Services</button>
+      <button (click)="scrollToSection('projects')" class="nav-link">Work</button>
+      <button (click)="scrollToSection('about')" class="nav-link">About</button>
+      <button (click)="scrollToSection('faq')" class="nav-link">FAQ</button>
     </div>
 
     <div class="hidden md:block w-px h-5 bg-gray-200/60"></div>
@@ -49,12 +50,10 @@
     [style.transform]="mobileMenuOpen ? 'scaleY(1)' : 'scaleY(0.95)'">
     <div class="p-6 pb-8 bg-white/95 backdrop-blur-2xl border border-white/80 rounded-[2rem]">
       <div class="flex flex-col gap-2">
-        <a routerLink="/services" routerLinkActive="!text-brand-blue !bg-blue-50" class="mobile-nav-link"
-          (click)="closeMobileMenu()">Services</a>
-        <a routerLink="/work" routerLinkActive="!text-brand-blue !bg-blue-50" class="mobile-nav-link"
-          (click)="closeMobileMenu()">Work</a>
-        <a routerLink="/about" routerLinkActive="!text-brand-blue !bg-blue-50" class="mobile-nav-link"
-          (click)="closeMobileMenu()">About</a>
+        <button (click)="scrollToSection('services')" class="mobile-nav-link">Services</button>
+        <button (click)="scrollToSection('projects')" class="mobile-nav-link">Work</button>
+        <button (click)="scrollToSection('about')" class="mobile-nav-link">About</button>
+        <button (click)="scrollToSection('faq')" class="mobile-nav-link">FAQ</button>
       </div>
 
       <div class="mt-6 pt-6 border-t border-gray-100">

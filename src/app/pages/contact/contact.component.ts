@@ -11,6 +11,10 @@ import * as AOS from 'aos';
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent implements OnInit {
+  readonly Mail = Mail;
+  readonly MessageCircle = MessageCircle;
+  readonly ShieldCheck = ShieldCheck;
+
   ngOnInit() {
     AOS.init({ once: true, offset: 50 });
   }

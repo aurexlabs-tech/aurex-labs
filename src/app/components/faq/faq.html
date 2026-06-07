@@ -1,0 +1,103 @@
+<section id="faq" class="faq-section">
+
+  <!-- Decorative blob — left (light cyan) -->
+  <div class="faq-blob faq-blob--left" aria-hidden="true">
+    <svg viewBox="0 0 420 480" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M80,40 C160,-20 340,20 380,120 C420,220 380,360 300,420 C220,480 60,460 20,360 C-20,260 0,100 80,40 Z" />
+    </svg>
+  </div>
+
+  <!-- Decorative blob — right (dark blue-violet) -->
+  <div class="faq-blob faq-blob--right" aria-hidden="true">
+    <svg viewBox="0 0 420 500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M340,60 C420,10 460,160 440,280 C420,400 340,500 220,480 C100,460 40,360 60,240 C80,120 260,110 340,60 Z" />
+    </svg>
+  </div>
+
+  <div class="faq-container">
+
+    <!-- Header -->
+    <div class="faq-header">
+      <p class="faq-eyebrow">Ask Us Anything</p>
+
+      <h2 class="faq-title">Frequently Asked Questions</h2>
+
+      <p class="faq-subtitle">
+        We've compiled the most common questions from clients like you.
+        If yours isn't here, just <a href="/contact" class="faq-subtitle__link">drop us a message</a>.
+      </p>
+    </div>
+
+    <!-- Category Filter Tabs -->
+    <div class="faq-filter" role="tablist" aria-label="FAQ categories">
+      @for (cat of categories; track cat) {
+        <button
+          class="faq-filter__tab"
+          [class.faq-filter__tab--active]="activeCategory() === cat"
+          (click)="setCategory(cat)"
+          role="tab"
+          [attr.aria-selected]="activeCategory() === cat"
+          [id]="'faq-tab-' + cat">
+          {{ cat }}
+        </button>
+      }
+    </div>
+
+    <!-- FAQ Accordion List -->
+    <div class="faq-list" role="tabpanel">
+      @for (item of filteredFaqs; track item.id) {
+        <div
+          class="faq-item"
+          [class.faq-item--open]="activeId() === item.id"
+          [id]="'faq-item-' + item.id">
+
+          <button
+            class="faq-item__trigger"
+            (click)="toggle(item.id)"
+            [attr.aria-expanded]="activeId() === item.id"
+            [attr.aria-controls]="'faq-body-' + item.id">
+
+            <span class="faq-item__question">{{ item.question }}</span>
+
+            <!-- Circle +/− icon -->
+            <span class="faq-item__icon-circle" aria-hidden="true">
+              @if (activeId() === item.id) {
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M3 8h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+              } @else {
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+              }
+            </span>
+          </button>
+
+          <div
+            class="faq-item__body"
+            [id]="'faq-body-' + item.id"
+            role="region"
+            [attr.aria-hidden]="activeId() !== item.id">
+            <p class="faq-item__answer">{{ item.answer }}</p>
+          </div>
+
+        </div>
+      }
+    </div>
+
+    <!-- Bottom CTA strip -->
+    <div class="faq-cta-strip">
+      <div class="faq-cta-strip__text">
+        <strong>Still have questions?</strong>
+        <span>We reply within 2 hours on business days.</span>
+      </div>
+      <a href="/contact" class="faq-cta-strip__btn" id="faq-contact-btn">
+        Talk to us
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</section>
