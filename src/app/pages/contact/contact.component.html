@@ -1,233 +1,289 @@
-<section id="contact" class="py-24 lg:py-32 bg-[#F8FAFC] relative overflow-hidden">
-  <div
-    class="absolute top-0 left-0 w-[600px] h-[600px] bg-gradient-to-br from-[#2563EB]/5 to-transparent rounded-full blur-[100px] -translate-y-1/4 -translate-x-1/4 pointer-events-none"
-  ></div>
-  <div
-    class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-gradient-to-tl from-[#00D9FF]/5 to-transparent rounded-full blur-[100px] translate-y-1/4 translate-x-1/4 pointer-events-none"
-  ></div>
+<section id="contact" class="contact-section relative overflow-hidden">
 
-  <div
-    class="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-12 gap-16 lg:gap-12 items-center"
-  >
-    <div data-aos="fade-right" class="lg:col-span-5 flex flex-col h-full justify-center">
-      <div
-        class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-blue-100 shadow-sm mb-8 w-fit"
-      >
-        <div class="w-1.5 h-1.5 rounded-full bg-[#00D9FF] animate-pulse"></div>
-        <span class="text-xs font-bold text-[#2563EB] uppercase tracking-[0.15em]"
-          >Start a Conversation</span
-        >
-      </div>
+  <!-- Background Decorations -->
+  <div class="contact-bg-radial-1 pointer-events-none"></div>
+  <div class="contact-bg-radial-2 pointer-events-none"></div>
+  <div class="dot-grid-light contact-bg-dots pointer-events-none"></div>
 
-      <h2
-        class="text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-[#0B0F19] leading-[1.1] tracking-tight mb-6"
-      >
-        Let's build something<br class="hidden lg:block" />
-        <span
-          class="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#2563EB] to-[#00D9FF] font-medium"
-          >impactful together.</span
-        >
-      </h2>
+  <div class="max-w-[1200px] mx-auto px-10 md:px-12 relative z-10">
 
-      <p class="text-gray-500 text-lg mb-10 leading-relaxed font-medium">
-        Whether you need a modern business website, a scalable web application, or a custom
-        enterprise solution, we're ready to engineer it.
-      </p>
-
-      <div class="flex flex-col gap-4 mb-8">
-        <a
-          href="mailto:hello@aurexlabs.com"
-          class="group flex items-center gap-5 p-4 rounded-2xl bg-white border border-gray-100 hover:border-blue-100 hover:shadow-[0_10px_30px_-15px_rgba(37,99,235,0.15)] transition-all duration-300"
-        >
-          <div
-            class="w-12 h-12 rounded-xl bg-[#F8FAFC] group-hover:bg-blue-50 flex items-center justify-center transition-colors duration-300"
-          >
-            <lucide-icon
-              [img]="Mail"
-              class="w-5 h-5 text-gray-400 group-hover:text-[#2563EB] transition-colors"
-            ></lucide-icon>
-          </div>
-          <div>
-            <div class="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-0.5">
-              Business Email
-            </div>
-            <div class="font-bold text-[#0B0F19] group-hover:text-[#2563EB] transition-colors">
-              hello&#64;aurexlabs.com
-            </div>
-          </div>
-        </a>
-
-        <a
-          href="#"
-          class="group flex items-center gap-5 p-4 rounded-2xl bg-white border border-gray-100 hover:border-green-100 hover:shadow-[0_10px_30px_-15px_rgba(16,185,129,0.15)] transition-all duration-300"
-        >
-          <div
-            class="w-12 h-12 rounded-xl bg-[#F8FAFC] group-hover:bg-green-50 flex items-center justify-center transition-colors duration-300"
-          >
-            <lucide-icon
-              [img]="MessageCircle"
-              class="w-5 h-5 text-gray-400 group-hover:text-green-500"
-            ></lucide-icon>
-          </div>
-          <div>
-            <div class="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-0.5">
-              WhatsApp
-            </div>
-            <div class="font-bold text-[#0B0F19] group-hover:text-green-600 transition-colors">
-              Start a Chat
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="flex items-start gap-3 p-5 rounded-2xl bg-blue-50/50 border border-blue-100/50">
-        <lucide-icon
-          [img]="ShieldCheck"
-          class="w-5 h-5 text-[#2563EB] flex-shrink-0 mt-0.5"
-        ></lucide-icon>
-        <p class="text-sm font-medium text-gray-600 leading-relaxed">
-          We focus on clean development, scalable architecture, and long-term reliability for every
-          partner.
-        </p>
+    <!-- Section Header -->
+    <div data-aos="fade-up" class="text-center mb-16">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-blue-100 shadow-sm mb-6">
+        <div class="w-2 h-2 rounded-full bg-[#2563EB] animate-pulse"></div>
+        <span class="text-xs font-bold text-[#2563EB] uppercase tracking-[0.18em]">Available for New Projects</span>
       </div>
     </div>
 
-    <div data-aos="fade-up" data-aos-delay="100" class="lg:col-span-7 relative z-10">
-      <div
-        class="bg-white rounded-[2.5rem] p-8 md:p-10 lg:p-12 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] border border-gray-100 relative"
-      >
-        <div class="mb-8">
-          <h3 class="text-2xl font-bold text-[#0B0F19] tracking-tight">Project Brief</h3>
-          <p class="text-gray-500 text-sm mt-2">
-            Fill out the details below, and we'll get back to you within 24 hours.
+    <!-- Two-column Layout -->
+    <div class="contact-grid">
+
+      <!-- ========== LEFT SECTION ========== -->
+      <div data-aos="fade-right" class="contact-left">
+
+        <!-- Illustration -->
+        <div class="contact-illustration-wrapper">
+          <img src="contact-hero.png" alt="Web development workspace illustration" class="contact-illustration" />
+          <!-- Floating badge -->
+          <div class="contact-badge-available">
+            <div class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
+            <span>Available for Projects</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <!-- Headline -->
+          <h2 class="contact-headline">
+            Let's Build Something<br />
+            <span class="gradient-text font-serif italic font-medium">Extraordinary</span>
+          </h2>
+
+          <!-- Description -->
+          <p class="contact-description">
+            Transform your ideas into fast, modern, and scalable digital experiences.
+            Whether you need a business website, portfolio, web application, or custom
+            software solution, let's create something impactful together.
           </p>
         </div>
 
-        <form class="flex flex-col gap-6">
-          <div class="grid sm:grid-cols-2 gap-5">
-            <div class="flex flex-col gap-2.5">
-              <label class="text-sm font-bold text-[#0B0F19]">Full Name</label>
-              <input
-                type="text"
-                placeholder="John Doe"
-                class="w-full bg-[#F8FAFC] border border-transparent rounded-xl px-4 py-3.5 text-[15px] text-[#0B0F19] placeholder-gray-400 focus:outline-none focus:border-blue-200 focus:bg-white focus:ring-4 focus:ring-blue-50/50 transition-all duration-300"
-              />
-            </div>
-            <div class="flex flex-col gap-2.5">
-              <label class="text-sm font-bold text-[#0B0F19]">Email Address</label>
-              <input
-                type="email"
-                placeholder="john@company.com"
-                class="w-full bg-[#F8FAFC] border border-transparent rounded-xl px-4 py-3.5 text-[15px] text-[#0B0F19] placeholder-gray-400 focus:outline-none focus:border-blue-200 focus:bg-white focus:ring-4 focus:ring-blue-50/50 transition-all duration-300"
-              />
-            </div>
-          </div>
-
-          <div class="flex flex-col gap-2.5">
-            <label class="text-sm font-bold text-[#0B0F19]"
-              >Company Name <span class="text-gray-400 font-normal">(Optional)</span></label
-            >
-            <input
-              type="text"
-              placeholder="Acme Corp"
-              class="w-full bg-[#F8FAFC] border border-transparent rounded-xl px-4 py-3.5 text-[15px] text-[#0B0F19] placeholder-gray-400 focus:outline-none focus:border-blue-200 focus:bg-white focus:ring-4 focus:ring-blue-50/50 transition-all duration-300"
-            />
-          </div>
-
-          <div class="w-full h-px bg-gray-100 my-2"></div>
-
-          <div class="grid sm:grid-cols-2 gap-5">
-            <div class="flex flex-col gap-2.5">
-              <label class="text-sm font-bold text-[#0B0F19]">What do you need?</label>
-              <div class="relative">
-                <select
-                  class="w-full bg-[#F8FAFC] border border-transparent rounded-xl px-4 py-3.5 text-[15px] text-[#0B0F19] focus:outline-none focus:border-blue-200 focus:bg-white focus:ring-4 focus:ring-blue-50/50 transition-all duration-300 appearance-none cursor-pointer"
-                >
-                  <option value="" disabled selected>Select project type...</option>
-                  <option value="webapp">Web Application</option>
-                  <option value="enterprise">Enterprise Solution</option>
-                  <option value="website">Business Website</option>
-                  <option value="ai">AI Integration</option>
-                  <option value="other">Other</option>
-                </select>
-                <div
-                  class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400"
-                >
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="m6 9 6 6 6-6" />
-                  </svg>
-                </div>
+        <div class="flex flex-col gap-6">
+          <!-- Contact Cards -->
+          <div class="contact-cards">
+            <a href="mailto:hello@aurexlabs.com" class="contact-card contact-card--email">
+              <div class="contact-card__icon-wrap contact-card__icon-wrap--email">
+                <lucide-icon [img]="Mail" class="contact-card__icon"></lucide-icon>
               </div>
-            </div>
+              <div class="contact-card__body">
+                <!-- <div class="contact-card__label">Business Email</div> -->
+                <div class="contact-card__value">hello&#64;aurexlabs.com</div>
+                <div class="contact-card__note">Typically replies within 24 hours</div>
+              </div>
+              <div class="contact-card__arrow">
+                <lucide-icon [img]="ArrowRight" class="contact-card__arrow-icon"></lucide-icon>
+              </div>
+            </a>
 
-            <div class="flex flex-col gap-2.5">
-              <label class="text-sm font-bold text-[#0B0F19]">Estimated Budget</label>
-              <div class="relative">
-                <select
-                  class="w-full bg-[#F8FAFC] border border-transparent rounded-xl px-4 py-3.5 text-[15px] text-[#0B0F19] focus:outline-none focus:border-blue-200 focus:bg-white focus:ring-4 focus:ring-blue-50/50 transition-all duration-300 appearance-none cursor-pointer"
-                >
-                  <option value="" disabled selected>Select budget range...</option>
-                  <option value="small">Under $5k</option>
-                  <option value="medium">$5k - $15k</option>
-                  <option value="large">$15k - $50k</option>
-                  <option value="enterprise">$50k+</option>
-                </select>
-                <div
-                  class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400"
-                >
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="m6 9 6 6 6-6" />
-                  </svg>
-                </div>
+            <a href="https://wa.me/919999999999" target="_blank" rel="noopener"
+              class="contact-card contact-card--whatsapp">
+              <div class="contact-card__icon-wrap contact-card__icon-wrap--whatsapp">
+                <lucide-icon [img]="MessageCircle" class="contact-card__icon"></lucide-icon>
+              </div>
+              <div class="contact-card__body">
+                <!-- <div class="contact-card__label">WhatsApp</div> -->
+                <div class="contact-card__value">Start a Chat</div>
+                <div class="contact-card__note">Available Mon–Sat</div>
+              </div>
+              <div class="contact-card__arrow">
+                <lucide-icon [img]="ArrowRight" class="contact-card__arrow-icon"></lucide-icon>
+              </div>
+            </a>
+          </div>
+
+          <!-- Trust Section -->
+          <div class="contact-trust-card">
+            <div class="contact-trust-card__icon">
+              <lucide-icon [img]="ShieldCheck" class="w-[20px] h-[20px] text-[#2563EB]"></lucide-icon>
+            </div>
+            <div>
+              <p class="contact-trust-card__title">Trusted by startups, entrepreneurs, and growing businesses.</p>
+              <div class="contact-trust-card__items">
+                <div class="trust-check-item"><lucide-icon [img]="Check" class="w-3.5 h-3.5"></lucide-icon> Free
+                  Consultation</div>
+                <div class="trust-check-item"><lucide-icon [img]="Check" class="w-3.5 h-3.5"></lucide-icon> Transparent
+                  Pricing</div>
+                <div class="trust-check-item"><lucide-icon [img]="Check" class="w-3.5 h-3.5"></lucide-icon> Timely
+                  Delivery</div>
+                <div class="trust-check-item"><lucide-icon [img]="Check" class="w-3.5 h-3.5"></lucide-icon> Long-Term
+                  Support</div>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="flex flex-col gap-2.5 mb-2">
-            <label class="text-sm font-bold text-[#0B0F19]">Project Details</label>
-            <textarea
-              rows="4"
-              placeholder="Tell us about your goals, timeline, and technical requirements..."
-              class="w-full bg-[#F8FAFC] border border-transparent rounded-xl px-4 py-3.5 text-[15px] text-[#0B0F19] placeholder-gray-400 focus:outline-none focus:border-blue-200 focus:bg-white focus:ring-4 focus:ring-blue-50/50 transition-all duration-300 resize-none"
-            ></textarea>
-          </div>
-
-          <button
-            type="button"
-            class="group w-full py-4 rounded-xl bg-[#0B0F19] text-white font-bold text-[15px] hover:bg-gradient-to-r hover:from-[#2563EB] hover:to-[#00D9FF] hover:shadow-[0_10px_30px_-10px_rgba(37,99,235,0.4)] transition-all duration-500 flex items-center justify-center gap-2 mt-2"
-          >
-            Submit Project Brief
-            <svg
-              class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.5"
-              viewBox="0 0 24 24"
-            >
-              <path d="M5 12h14" stroke-linecap="round" />
-              <path d="m12 5 7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </button>
-        </form>
       </div>
+
+      <!-- ========== RIGHT SECTION — FORM ========== -->
+      <div data-aos="fade-up" data-aos-delay="100" class="contact-right">
+        <div class="contact-form-card">
+
+          <!-- Form Header -->
+          <div class="contact-form-header">
+            <div class="contact-form-header__icon">
+              <lucide-icon [img]="Rocket" class="w-5 h-5 text-[#2563EB]"></lucide-icon>
+            </div>
+            <div>
+              <h3 class="contact-form-header__title">Project Brief</h3>
+              <p class="contact-form-header__subtitle">Fill out the details below, and we'll get back to you within 24
+                hours.</p>
+            </div>
+          </div>
+
+          <form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+
+            <!-- Row 1: Name + Email -->
+            <div class="contact-form__row">
+
+              <div class="form-field">
+                <label class="form-field__label">Full Name</label>
+                <div class="form-field__input-wrap">
+                  <span class="form-field__icon">
+                    <lucide-icon [img]="User" class="w-4 h-4"></lucide-icon>
+                  </span>
+                  <input type="text" placeholder="John Doe" name="fullName" [(ngModel)]="formData.fullName"
+                    class="form-field__input" />
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label class="form-field__label">Email Address</label>
+                <div class="form-field__input-wrap">
+                  <span class="form-field__icon">
+                    <lucide-icon [img]="AtSign" class="w-4 h-4"></lucide-icon>
+                  </span>
+                  <input type="email" placeholder="john&#64;company.com" name="email" [(ngModel)]="formData.email"
+                    class="form-field__input" />
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Company Name -->
+            <div class="form-field">
+              <label class="form-field__label">
+                Company Name
+                <span class="form-field__optional">(Optional)</span>
+              </label>
+              <div class="form-field__input-wrap">
+                <span class="form-field__icon">
+                  <lucide-icon [img]="Building2" class="w-4 h-4"></lucide-icon>
+                </span>
+                <input type="text" placeholder="Acme Corp" name="company" [(ngModel)]="formData.company"
+                  class="form-field__input" />
+              </div>
+            </div>
+
+            <div class="form-divider"></div>
+
+            <!-- Row 2: Project Type + Budget -->
+            <div class="contact-form__row">
+
+              <div class="form-field">
+                <label class="form-field__label">Project Type</label>
+                <div class="form-field__select-wrap">
+                  <span class="form-field__icon">
+                    <lucide-icon [img]="Briefcase" class="w-4 h-4"></lucide-icon>
+                  </span>
+                  <select name="projectType" [(ngModel)]="formData.projectType" class="form-field__select">
+                    <option value="" disabled selected>Select project type...</option>
+                    <option value="business-website">Business Website</option>
+                    <option value="portfolio">Portfolio Website</option>
+                    <option value="ecommerce">E-Commerce Website</option>
+                    <option value="webapp">Web Application</option>
+                    <option value="software">Custom Software</option>
+                    <option value="uiux">UI/UX Design</option>
+                    <option value="redesign">Website Redesign</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <span class="form-field__chevron">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="m6 9 6 6 6-6" />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label class="form-field__label">Estimated Budget</label>
+                <div class="form-field__select-wrap">
+                  <span class="form-field__icon">
+                    <lucide-icon [img]="IndianRupee" class="w-4 h-4"></lucide-icon>
+                  </span>
+                  <select name="budget" [(ngModel)]="formData.budget" class="form-field__select">
+                    <option value="" disabled selected>Select budget range...</option>
+                    <option value="10k-25k">₹10k – ₹25k</option>
+                    <option value="25k-50k">₹25k – ₹50k</option>
+                    <option value="50k-1l">₹50k – ₹1L</option>
+                    <option value="1l-3l">₹1L – ₹3L</option>
+                    <option value="3l+">₹3L+</option>
+                    <option value="discuss">Let's Discuss</option>
+                  </select>
+                  <span class="form-field__chevron">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="m6 9 6 6 6-6" />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Timeline -->
+            <div class="form-field">
+              <label class="form-field__label">When do you need this project?</label>
+              <div class="form-field__select-wrap">
+                <span class="form-field__icon">
+                  <lucide-icon [img]="CalendarClock" class="w-4 h-4"></lucide-icon>
+                </span>
+                <select name="timeline" [(ngModel)]="formData.timeline" class="form-field__select">
+                  <option value="" disabled selected>Select timeline...</option>
+                  <option value="asap">ASAP</option>
+                  <option value="2weeks">Within 2 Weeks</option>
+                  <option value="1month">Within 1 Month</option>
+                  <option value="flexible">Flexible</option>
+                </select>
+                <span class="form-field__chevron">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+            <!-- Project Details -->
+            <div class="form-field">
+              <label class="form-field__label">Project Details</label>
+              <div class="form-field__textarea-wrap">
+                <span class="form-field__icon form-field__icon--textarea">
+                  <lucide-icon [img]="FileText" class="w-4 h-4"></lucide-icon>
+                </span>
+                <textarea rows="5" name="details" [(ngModel)]="formData.details"
+                  placeholder="Tell us about your goals, features, timeline, business requirements, and any reference websites you like."
+                  class="form-field__textarea"></textarea>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="contact-submit-btn" [class.contact-submit-btn--loading]="isSubmitting"
+              [disabled]="isSubmitting || isSubmitted">
+              <span *ngIf="!isSubmitting && !isSubmitted" class="flex items-center justify-center gap-2">
+                Get a Free Consultation
+                <lucide-icon [img]="ArrowRight"
+                  class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"></lucide-icon>
+              </span>
+              <span *ngIf="isSubmitting" class="flex items-center justify-center gap-2">
+                <span class="submit-spinner"></span>
+                Sending your brief...
+              </span>
+              <span *ngIf="isSubmitted && !isSubmitting" class="flex items-center justify-center gap-2">
+                <lucide-icon [img]="CheckCircle2" class="w-5 h-5"></lucide-icon>
+                Message Sent! We'll be in touch.
+              </span>
+            </button>
+
+            <!-- Response Time Note -->
+            <!-- <p class="contact-response-note">
+              <lucide-icon [img]="Clock" class="w-3.5 h-3.5 inline-block mr-1 text-[#2563EB]"></lucide-icon>
+              Average response time: <strong>under 24 hours</strong>
+            </p> -->
+
+
+          </form>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>

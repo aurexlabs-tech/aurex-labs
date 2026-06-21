@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CtaComponent } from '../../components/cta/cta.component';
 import { HeroComponent } from '../../components/hero/hero.component';
-import { ProjectsComponent } from '../projects/projects.component';
+import { ProjectsComponent } from '../../components/projects/projects.component';
 import { TestimonialsComponent } from '../../components/testimonials/testimonials.component';
 import { WhyChooseUsComponent } from '../../components/why-choose-us/why-choose-us.component';
 import { ProcessComponent } from '../../components/process/process.component';
-import { ServicesComponent } from '../services/services.component';
+import { ServicesComponent } from '../../components/services/services.component';
 import { Faq } from '../../components/faq/faq';
 
 @Component({

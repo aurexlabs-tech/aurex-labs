@@ -1,126 +1,223 @@
-<section class="hero-section" (mousemove)="onMouseMove($event)">
-  <!-- Background image layer -->
-  <div class="hero-bg-image"></div>
+<section class="hero-section">
 
-  <!-- Subtle gradient overlays for depth -->
-  <div class="hero-gradient-overlay"></div>
+  <!-- Subtle background shapes -->
+  <div class="hero-bg-orb hero-bg-orb--1" aria-hidden="true"></div>
+  <div class="hero-bg-orb hero-bg-orb--2" aria-hidden="true"></div>
+  <div class="dot-grid-light hero-bg-dots" aria-hidden="true"></div>
 
-  <!-- Main content wrapper — flexbox layout -->
   <div class="hero-container">
-    <!-- LEFT SIDE: Content -->
-    <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+
+    <!-- ===================== LEFT: Content ===================== -->
+    <div class="hero-content" data-aos="fade-up" data-aos-duration="800">
+
+      <!-- Badge -->
       <div class="hero-badge">
-        <span class="badge-dot-wrapper">
-          <span class="badge-dot-ping"></span>
-          <span class="badge-dot"></span>
+        <span class="hero-badge__dot-wrap">
+          <span class="hero-badge__ping"></span>
+          <span class="hero-badge__dot"></span>
         </span>
-        <span class="badge-text">Elite Engineering Duo</span>
+        <span class="hero-badge__text">Elite Engineering Duo</span>
       </div>
 
+      <!-- Headline -->
       <h1 class="hero-title">
-        High-performance<br />
-        platforms that scale<br />
-        <span class="hero-title-accent">ambitious businesses.</span>
+        High-Performance<br />
+        Platforms Built<br />
+        <span class="hero-title__accent font-serif italic">for Growth.</span>
       </h1>
 
+      <!-- Description -->
       <p class="hero-description">
-        We are an agile, senior-level development team bringing strict corporate discipline and
-        enterprise-grade architecture to modern web applications and AI integrations.
+        Helping startups and businesses build scalable web applications,
+        automation systems, and AI-powered solutions with enterprise-grade engineering.
       </p>
 
+      <!-- CTA Buttons -->
       <div class="hero-actions">
-        <a routerLink="/contact" class="btn-primary">
+        <a routerLink="/contact" class="hero-btn hero-btn--primary">
           <span>Start Your Project</span>
-          <svg class="btn-arrow" fill="none" stroke="currentColor" stroke-width="2.5"
+          <svg class="hero-btn__arrow" fill="none" stroke="currentColor" stroke-width="2.5"
             stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
             <path d="M5 12h14" />
             <path d="m12 5 7 7-7 7" />
           </svg>
         </a>
-        <a routerLink="/work" class="btn-secondary">
+        <a routerLink="/work" class="hero-btn hero-btn--secondary">
           View Case Studies
         </a>
       </div>
 
+
+      <!-- Stats strip -->
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat__value">20+</div>
+          <div class="hero-stat__label">Projects Delivered</div>
+        </div>
+        <div class="hero-stat__divider"></div>
+        <div class="hero-stat">
+          <div class="hero-stat__value">24h</div>
+          <div class="hero-stat__label">Response Time</div>
+        </div>
+        <div class="hero-stat__divider"></div>
+        <div class="hero-stat">
+          <div class="hero-stat__value">100%</div>
+          <div class="hero-stat__label">Responsive Solutions</div>
+        </div>
+      </div>
+
     </div>
 
-    <!-- RIGHT SIDE: Animated Orbital Element -->
-    <div class="hero-visual" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
-      <div class="orbital-container"
-        [style.transform]="'translate(' + mouseX * 0.15 + 'px, ' + mouseY * 0.15 + 'px)'"
-        style="transition: transform 0.3s ease-out">
+    <!-- ===================== RIGHT: Architecture Visual ===================== -->
+    <div class="hero-visual" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="150">
 
-        <!-- Outer ring -->
-        <div class="orbital-ring orbital-ring-outer">
-          <div class="orbital-dot orbital-dot-1"></div>
-          <div class="orbital-dot orbital-dot-2"></div>
+      <!-- Ambient glow -->
+      <div class="arch-glow" aria-hidden="true"></div>
+
+      <!-- ── Architecture Diagram ── -->
+      <div class="arch-diagram">
+
+        <!-- SVG connector lines (drawn first, behind cards) -->
+        <svg class="arch-connectors" viewBox="0 0 460 520" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Top: Web Apps → Hub -->
+          <line x1="100" y1="110" x2="200" y2="200" class="arch-line arch-line--1"/>
+          <!-- Top: API Services → Hub -->
+          <line x1="360" y1="110" x2="260" y2="200" class="arch-line arch-line--2"/>
+          <!-- Left: Cloud → Hub -->
+          <line x1="60"  y1="280" x2="178" y2="260" class="arch-line arch-line--3"/>
+          <!-- Right: AI → Hub -->
+          <line x1="400" y1="280" x2="282" y2="260" class="arch-line arch-line--4"/>
+          <!-- Bottom: Analytics → Hub -->
+          <line x1="230" y1="430" x2="230" y2="320" class="arch-line arch-line--5"/>
+
+          <!-- Animated travel dots -->
+          <circle r="3" class="arch-travel arch-travel--1">
+            <animateMotion dur="2.8s" repeatCount="indefinite" begin="0s">
+              <mpath href="#path1"/>
+            </animateMotion>
+          </circle>
+          <circle r="3" class="arch-travel arch-travel--2">
+            <animateMotion dur="3.2s" repeatCount="indefinite" begin="0.6s">
+              <mpath href="#path2"/>
+            </animateMotion>
+          </circle>
+          <circle r="3" class="arch-travel arch-travel--3">
+            <animateMotion dur="2.5s" repeatCount="indefinite" begin="1.2s">
+              <mpath href="#path3"/>
+            </animateMotion>
+          </circle>
+          <circle r="3" class="arch-travel arch-travel--4">
+            <animateMotion dur="3.5s" repeatCount="indefinite" begin="0.3s">
+              <mpath href="#path4"/>
+            </animateMotion>
+          </circle>
+          <circle r="3" class="arch-travel arch-travel--5">
+            <animateMotion dur="2.2s" repeatCount="indefinite" begin="1.8s">
+              <mpath href="#path5"/>
+            </animateMotion>
+          </circle>
+
+          <!-- Hidden motion paths -->
+          <defs>
+            <path id="path1" d="M 100 110 L 200 200"/>
+            <path id="path2" d="M 360 110 L 260 200"/>
+            <path id="path3" d="M 60 280 L 178 260"/>
+            <path id="path4" d="M 400 280 L 282 260"/>
+            <path id="path5" d="M 230 430 L 230 320"/>
+          </defs>
+        </svg>
+
+        <!-- ── Central Hub ── -->
+        <div class="arch-hub">
+          <div class="arch-hub__ring arch-hub__ring--outer" aria-hidden="true"></div>
+          <div class="arch-hub__ring arch-hub__ring--inner" aria-hidden="true"></div>
+          <div class="arch-hub__card">
+            <div class="arch-hub__icon">
+              <!-- layers icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                <polyline points="2 17 12 22 22 17"/>
+                <polyline points="2 12 12 17 22 12"/>
+              </svg>
+            </div>
+            <div class="arch-hub__label">Modern Web<br/>Platform</div>
+          </div>
         </div>
 
-        <!-- Middle ring -->
-        <div class="orbital-ring orbital-ring-middle">
-          <div class="orbital-dot orbital-dot-3"></div>
-          <div class="orbital-dot orbital-dot-4"></div>
-          <div class="orbital-dot orbital-dot-5"></div>
-        </div>
+        <!-- ── Satellite Nodes ── -->
 
-        <!-- Inner ring -->
-        <div class="orbital-ring orbital-ring-inner">
-          <div class="orbital-dot orbital-dot-6"></div>
-        </div>
-
-        <!-- Center core -->
-        <div class="orbital-core">
-          <div class="orbital-core-inner">
-            <svg class="core-icon" fill="none" stroke="currentColor" stroke-width="1.5"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+        <!-- Web Applications — top-left -->
+        <div class="arch-node arch-node--webapp">
+          <div class="arch-node__icon arch-node__icon--blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2"/>
+              <path d="M8 21h8M12 17v4"/>
             </svg>
           </div>
-          <div class="orbital-core-glow"></div>
+          <div class="arch-node__text">Web<br/>Applications</div>
+          <div class="arch-node__pulse" aria-hidden="true"></div>
         </div>
 
-        <!-- Floating tech labels -->
-        <div class="floating-label floating-label-1"
-          [style.transform]="'translate(' + mouseX * -0.3 + 'px, ' + mouseY * -0.3 + 'px)'"
-          style="transition: transform 0.4s ease-out">
-          <div class="label-icon">
-            <svg class="label-svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+        <!-- API Services — top-right -->
+        <div class="arch-node arch-node--api">
+          <div class="arch-node__icon arch-node__icon--violet">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 20V10M12 20V4M6 20v-6"/>
             </svg>
           </div>
-          <span>API Layer</span>
+          <div class="arch-node__text">API<br/>Services</div>
+          <div class="arch-node__pulse" aria-hidden="true"></div>
         </div>
 
-        <div class="floating-label floating-label-2"
-          [style.transform]="'translate(' + mouseX * 0.4 + 'px, ' + mouseY * -0.2 + 'px)'"
-          style="transition: transform 0.35s ease-out">
-          <div class="label-icon label-icon-cyan">
-            <svg class="label-svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125v-3.75" />
+        <!-- Cloud Infrastructure — left -->
+        <div class="arch-node arch-node--cloud">
+          <div class="arch-node__icon arch-node__icon--sky">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
             </svg>
           </div>
-          <span>Cloud DB</span>
+          <div class="arch-node__text">Cloud<br/>Infrastructure</div>
+          <div class="arch-node__pulse" aria-hidden="true"></div>
         </div>
 
-        <div class="floating-label floating-label-3"
-          [style.transform]="'translate(' + mouseX * -0.2 + 'px, ' + mouseY * 0.35 + 'px)'"
-          style="transition: transform 0.45s ease-out">
-          <div class="label-icon label-icon-blue">
-            <svg class="label-svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 0 0-2.455 2.456Z" />
+        <!-- AI Integrations — right -->
+        <div class="arch-node arch-node--ai">
+          <div class="arch-node__icon arch-node__icon--emerald">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z"/>
+              <path d="M18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 0 0-2.455 2.456Z"/>
             </svg>
           </div>
-          <span>AI Engine</span>
+          <div class="arch-node__text">AI<br/>Integrations</div>
+          <div class="arch-node__pulse" aria-hidden="true"></div>
         </div>
 
-        <!-- Connecting lines (decorative) -->
-        <div class="connect-line connect-line-1"></div>
-        <div class="connect-line connect-line-2"></div>
-        <div class="connect-line connect-line-3"></div>
+        <!-- Analytics — bottom -->
+        <div class="arch-node arch-node--analytics">
+          <div class="arch-node__icon arch-node__icon--amber">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 3v18h18"/>
+              <path d="m19 9-5 5-4-4-3 3"/>
+            </svg>
+          </div>
+          <div class="arch-node__text">Analytics<br/>Dashboard</div>
+          <div class="arch-node__pulse" aria-hidden="true"></div>
+        </div>
+
+        <!-- Floating status chip — inside diagram so it's never clipped -->
+        <div class="arch-status-chip">
+          <span class="arch-status-chip__dot"></span>
+          <span>All Systems Operational</span>
+        </div>
+
+      </div><!-- /arch-diagram -->
+
+      <!-- Floating uptime card — outside diagram, inside visual -->
+      <div class="arch-uptime-card">
+        <div class="arch-uptime-card__value">99.9%</div>
+        <div class="arch-uptime-card__label">Uptime SLA</div>
       </div>
+
     </div>
   </div>
 </section>

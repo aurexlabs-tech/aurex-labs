@@ -10,7 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
   standalone: true,
   imports: [
     CommonModule,
-    RouterOutlet, // Crucial for multi-page routing
+    RouterOutlet,
     NavbarComponent,
     FooterComponent
   ],

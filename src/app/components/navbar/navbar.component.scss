@@ -2,40 +2,94 @@
   display: block;
 }
 
+// ============================================================
+// NAVBAR PILL
+// ============================================================
+.navbar-pill {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 9999px;
+  padding: 0.4rem 0.4rem 0.4rem 0.875rem;
+  box-shadow:
+    0 4px 16px rgba(37, 99, 235, 0.06),
+    0 1px 4px rgba(0, 0, 0, 0.04),
+    0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &--scrolled {
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow:
+      0 8px 32px rgba(37, 99, 235, 0.1),
+      0 2px 8px rgba(0, 0, 0, 0.06),
+      0 0 0 1px rgba(255, 255, 255, 0.7) inset;
+    border-color: rgba(203, 213, 225, 0.7);
+  }
+}
+
+// ============================================================
+// LOGO
+// ============================================================
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  text-decoration: none;
+  padding-right: 0.25rem;
+}
+
+.navbar-logo__name {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+// ============================================================
+// NAV LINKS
+// ============================================================
 .nav-link {
   position: relative;
-  padding: 0.5rem 1rem;
+  padding: 0.45rem 0.875rem;
   font-size: 0.875rem;
   font-weight: 500;
-  color: #4B5563;
-  /* text-gray-600 */
+  color: #475569;
   text-decoration: none;
   border-radius: 9999px;
-  transition: all 0.3s ease;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1;
-  /* Button reset */
   background: none;
   border: none;
   cursor: pointer;
   font-family: inherit;
+  white-space: nowrap;
 
-  /* Soft blue capsule hover effect */
   &::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(37, 99, 235, 0.06);
-    /* Soft blue tint */
+    background: rgba(37, 99, 235, 0.07);
     border-radius: 9999px;
-    transform: scale(0.8);
+    transform: scale(0.85);
     opacity: 0;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: -1;
   }
 
   &:hover {
-    color: #2563EB;
-    /* Brand Blue */
+    color: #2563eb;
+
+    &::before {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  // Active state — add this dynamically via router active class if needed
+  &.active {
+    color: #2563eb;
+    font-weight: 600;
 
     &::before {
       transform: scale(1);
@@ -44,27 +98,74 @@
   }
 }
 
+// ============================================================
+// PLAIN LINK (Contact text link)
+// ============================================================
+.navbar-link-plain {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.875rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #64748b;
+  text-decoration: none;
+  border-radius: 9999px;
+  transition: all 0.25s ease;
+
+  &:hover {
+    color: #2563eb;
+    background: rgba(37, 99, 235, 0.06);
+  }
+}
+
+// ============================================================
+// CTA BUTTON
+// ============================================================
+.navbar-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1.125rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+  box-shadow: 0 3px 12px rgba(37, 99, 235, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// ============================================================
+// MOBILE NAV LINK
+// ============================================================
 .mobile-nav-link {
   display: block;
   width: 100%;
   text-align: left;
-  padding: 0.875rem 1.25rem;
-  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.9375rem;
   font-weight: 500;
-  color: #4B5563;
+  color: #475569;
   text-decoration: none;
-  border-radius: 1rem;
-  transition: all 0.3s ease;
-  /* Button reset */
+  border-radius: 0.875rem;
+  transition: all 0.25s ease;
   background: none;
   border: none;
   cursor: pointer;
   font-family: inherit;
 
   &:hover {
-    color: #2563EB;
-    /* Brand Blue */
-    background: rgba(37, 99, 235, 0.04);
-    transform: translateX(4px);
+    color: #2563eb;
+    background: rgba(37, 99, 235, 0.05);
+    padding-left: 1.25rem;
   }
 }
