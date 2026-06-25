@@ -1,3 +1,25 @@
 :host {
   display: block;
 }
+
+@keyframes circlePulse {
+  0%, 100% {
+    scale: 1;
+    opacity: 1;
+  }
+  50% {
+    scale: 1.06;
+    opacity: 0.65;
+  }
+}
+
+.cta-circle {
+  animation: circlePulse 5s ease-in-out infinite;
+  will-change: scale, opacity;
+
+  &--1 { animation-delay: 0s; }
+  &--2 { animation-delay: 0.5s; }
+  &--3 { animation-delay: 1s; }
+  &--4 { animation-delay: 1.5s; }
+  &--5 { animation-delay: 2s; }
+}

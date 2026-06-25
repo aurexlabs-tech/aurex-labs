@@ -14,6 +14,31 @@
 }
 
 /* ── Decorative Blobs — fixed size, not content-driven ── */
+
+@keyframes blobFloat {
+  0%, 100% {
+    transform: translateY(-50%) translate(0, 0) rotate(0deg) scale(1);
+  }
+  33% {
+    transform: translateY(-50%) translate(8px, -12px) rotate(3deg) scale(1.03);
+  }
+  66% {
+    transform: translateY(-50%) translate(-6px, 8px) rotate(-2deg) scale(0.97);
+  }
+}
+
+@keyframes blobFloatAlt {
+  0%, 100% {
+    transform: translateY(-50%) translate(0, 0) rotate(0deg) scale(1);
+  }
+  33% {
+    transform: translateY(-50%) translate(-10px, 10px) rotate(-3deg) scale(0.97);
+  }
+  66% {
+    transform: translateY(-50%) translate(6px, -8px) rotate(2deg) scale(1.04);
+  }
+}
+
 .faq-blob {
   position: absolute;
   pointer-events: none;
@@ -33,6 +58,7 @@
 /* Left blob — light cyan/mint */
 .faq-blob--left {
   left: -100px;
+  animation: blobFloat 8s ease-in-out infinite;
 
   svg path {
     fill: #a8eaea;
@@ -45,6 +71,7 @@
   right: -90px;
   width: 280px;
   height: 280px;
+  animation: blobFloatAlt 10s ease-in-out infinite;
 
   svg path {
     fill: #b0b8d8;
