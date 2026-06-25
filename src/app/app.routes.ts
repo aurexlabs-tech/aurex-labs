@@ -1,20 +1,16 @@
 import { Routes } from '@angular/router';
 
-// Import your new Home wrapper and existing page components
-import { ServicesComponent } from './components/services/services.component';
-import { ProjectsComponent } from './components/projects/projects.component';
-import { ContactComponent } from './pages/contact/contact.component';
-import { HomeComponent } from './pages/home/home.component';
-
 export const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    loadComponent: () =>
+      import('./pages/home/home.component').then(m => m.HomeComponent),
     title: 'AurexLabs | Engineering Digital Scalability'
   },
   {
     path: 'contact',
-    component: ContactComponent,
+    loadComponent: () =>
+      import('./pages/contact/contact.component').then(m => m.ContactComponent),
     title: 'Contact | AurexLabs'
   },
   {
