@@ -12,9 +12,9 @@ import * as AOS from 'aos';
 export class TestimonialsComponent implements OnInit {
   readonly reviews = [
     {
-      quote: "AurexLabs completely transformed our internal operations. The custom dashboard they built using Angular is incredibly fast and intuitive. Highly professional team.",
+      quote: "Working with AurexLabs was a great experience. They understood our requirements, communicated clearly throughout the project, and delivered a modern website that represents our brand perfectly. We're very happy with the final result",
       name: "Sri Ram",
-      role: "CEO, StarVibes Studio",
+      role: "Founder, Star Vibes Studio",
       initials: "SR"
     }
   ];

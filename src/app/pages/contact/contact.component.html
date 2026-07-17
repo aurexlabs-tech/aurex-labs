@@ -8,12 +8,12 @@
   <div class="max-w-[1200px] mx-auto px-10 md:px-12 relative z-10">
 
     <!-- Section Header -->
-    <div data-aos="fade-up" class="text-center mb-16">
+    <!-- <div data-aos="fade-up" class="text-center mb-16">
       <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-blue-100 shadow-sm mb-6">
         <div class="w-2 h-2 rounded-full bg-[#2563EB] animate-pulse"></div>
         <span class="text-xs font-bold text-[#2563EB] uppercase tracking-[0.18em]">Available for New Projects</span>
       </div>
-    </div>
+    </div> -->
 
     <!-- Two-column Layout -->
     <div class="contact-grid">
@@ -23,39 +23,38 @@
 
         <!-- Illustration -->
         <div class="contact-illustration-wrapper">
-          <img src="contact-hero.png" alt="Web development workspace illustration" class="contact-illustration" />
+          <img src="contact-hero.svg" alt="Web development workspace illustration" class="contact-illustration" />
           <!-- Floating badge -->
-          <div class="contact-badge-available">
+          <!-- <div class="contact-badge-available">
             <div class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
             <span>Available for Projects</span>
-          </div>
+          </div> -->
         </div>
 
         <div class="flex flex-col gap-4">
           <!-- Headline -->
           <h2 class="contact-headline">
             Let's Build Something<br />
-            <span class="gradient-text font-serif italic font-medium">Extraordinary</span>
+            <span class="gradient-text font-serif italic font-medium">Great Together</span>
           </h2>
 
           <!-- Description -->
           <p class="contact-description">
-            Transform your ideas into fast, modern, and scalable digital experiences.
-            Whether you need a business website, portfolio, web application, or custom
-            software solution, let's create something impactful together.
+            Whether you need a business website, a custom web application, or improvements to an existing project, we're
+            here to help. Tell us about your goals, and we'll get back to you within 24 hours.
           </p>
         </div>
 
         <div class="flex flex-col gap-6">
           <!-- Contact Cards -->
           <div class="contact-cards">
-            <a href="mailto:hello@aurexlabs.com" class="contact-card contact-card--email">
+            <a href="mailto:aurexlabs.tech@gmail.com" class="contact-card contact-card--email">
               <div class="contact-card__icon-wrap contact-card__icon-wrap--email">
                 <lucide-icon [img]="Mail" class="contact-card__icon"></lucide-icon>
               </div>
               <div class="contact-card__body">
                 <!-- <div class="contact-card__label">Business Email</div> -->
-                <div class="contact-card__value">hello&#64;aurexlabs.com</div>
+                <div class="contact-card__value">aurexlabs.tech&#64;gmail.com</div>
                 <div class="contact-card__note">Typically replies within 24 hours</div>
               </div>
               <div class="contact-card__arrow">
@@ -70,7 +69,7 @@
               </div>
               <div class="contact-card__body">
                 <!-- <div class="contact-card__label">WhatsApp</div> -->
-                <div class="contact-card__value">Start a Chat</div>
+                <div class="contact-card__value">Chat on WhatsApp</div>
                 <div class="contact-card__note">Available Mon–Sat</div>
               </div>
               <div class="contact-card__arrow">
@@ -85,16 +84,20 @@
               <lucide-icon [img]="ShieldCheck" class="w-[20px] h-[20px] text-[#2563EB]"></lucide-icon>
             </div>
             <div>
-              <p class="contact-trust-card__title">Trusted by startups, entrepreneurs, and growing businesses.</p>
+              <p class="contact-trust-card__title">Why Work With Us?</p>
               <div class="contact-trust-card__items">
-                <div class="trust-check-item"><lucide-icon [img]="Check" class="w-3.5 h-3.5"></lucide-icon> Free
-                  Consultation</div>
-                <div class="trust-check-item"><lucide-icon [img]="Check" class="w-3.5 h-3.5"></lucide-icon> Transparent
-                  Pricing</div>
-                <div class="trust-check-item"><lucide-icon [img]="Check" class="w-3.5 h-3.5"></lucide-icon> Timely
-                  Delivery</div>
-                <div class="trust-check-item"><lucide-icon [img]="Check" class="w-3.5 h-3.5"></lucide-icon> Long-Term
-                  Support</div>
+                <div class="trust-check-item"><lucide-icon [img]="Check" class="w-3.5 h-3.5"></lucide-icon>
+                  Free Consultation
+                </div>
+                <div class="trust-check-item"><lucide-icon [img]="Check" class="w-3.5 h-3.5"></lucide-icon>
+                  Transparent Pricing
+                </div>
+                <div class="trust-check-item"><lucide-icon [img]="Check" class="w-3.5 h-3.5"></lucide-icon>
+                  Timely Delivery
+                </div>
+                <div class="trust-check-item"><lucide-icon [img]="Check" class="w-3.5 h-3.5"></lucide-icon>
+                  Ongoing Support
+                </div>
               </div>
             </div>
           </div>
@@ -112,20 +115,22 @@
               <lucide-icon [img]="Rocket" class="w-5 h-5 text-[#2563EB]"></lucide-icon>
             </div>
             <div>
-              <h3 class="contact-form-header__title">Project Brief</h3>
-              <p class="contact-form-header__subtitle">Fill out the details below, and we'll get back to you within 24
-                hours.</p>
+              <h3 class="contact-form-header__title">Tell Us About Your Project</h3>
+              <p class="contact-form-header__subtitle">Share a few details about your project, and we'll get back to you
+                within 24 hours.</p>
             </div>
           </div>
 
           <form class="contact-form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-          
+
             <!-- Global Status Message -->
             <div *ngIf="statusMessage" class="p-4 rounded-xl text-sm font-medium transition-all shadow-sm"
-                 [ngClass]="{'bg-green-50 text-green-700 border border-green-200': submissionStatus === 'success', 'bg-red-50 text-red-700 border border-red-200': submissionStatus === 'error'}">
+              [ngClass]="{'bg-green-50 text-green-700 border border-green-200': submissionStatus === 'success', 'bg-red-50 text-red-700 border border-red-200': submissionStatus === 'error'}">
               <div class="flex items-start gap-2.5">
-                <lucide-icon *ngIf="submissionStatus === 'success'" [img]="CheckCircle2" class="w-5 h-5 shrink-0 mt-0.5"></lucide-icon>
-                <lucide-icon *ngIf="submissionStatus === 'error'" [img]="ShieldCheck" class="w-5 h-5 shrink-0 mt-0.5"></lucide-icon>
+                <lucide-icon *ngIf="submissionStatus === 'success'" [img]="CheckCircle2"
+                  class="w-5 h-5 shrink-0 mt-0.5"></lucide-icon>
+                <lucide-icon *ngIf="submissionStatus === 'error'" [img]="ShieldCheck"
+                  class="w-5 h-5 shrink-0 mt-0.5"></lucide-icon>
                 <span class="leading-relaxed">{{ statusMessage }}</span>
               </div>
             </div>
@@ -140,10 +145,11 @@
                     <lucide-icon [img]="User" class="w-4 h-4"></lucide-icon>
                   </span>
                   <input type="text" placeholder="John Doe" name="fullName" [(ngModel)]="formData.fullName"
-                    #nameCtrl="ngModel" required minlength="3" maxlength="100"
-                    class="form-field__input" [ngClass]="{'border-red-400 focus:border-red-500 focus:ring-red-100': nameCtrl.invalid && (nameCtrl.dirty || nameCtrl.touched)}" />
+                    #nameCtrl="ngModel" required minlength="3" maxlength="100" class="form-field__input"
+                    [ngClass]="{'border-red-400 focus:border-red-500 focus:ring-red-100': nameCtrl.invalid && (nameCtrl.dirty || nameCtrl.touched)}" />
                 </div>
-                <div *ngIf="nameCtrl.invalid && (nameCtrl.dirty || nameCtrl.touched)" class="text-[0.75rem] text-red-500 mt-1.5 font-medium pl-1">
+                <div *ngIf="nameCtrl.invalid && (nameCtrl.dirty || nameCtrl.touched)"
+                  class="text-[0.75rem] text-red-500 mt-1.5 font-medium pl-1">
                   <span *ngIf="nameCtrl.errors?.['required']">Full name is required.</span>
                   <span *ngIf="nameCtrl.errors?.['minlength']">Name must be at least 3 characters.</span>
                 </div>
@@ -157,9 +163,11 @@
                   </span>
                   <input type="email" placeholder="john@company.com" name="email" [(ngModel)]="formData.email"
                     #emailCtrl="ngModel" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-                    class="form-field__input" [ngClass]="{'border-red-400 focus:border-red-500 focus:ring-red-100': emailCtrl.invalid && (emailCtrl.dirty || emailCtrl.touched)}" />
+                    class="form-field__input"
+                    [ngClass]="{'border-red-400 focus:border-red-500 focus:ring-red-100': emailCtrl.invalid && (emailCtrl.dirty || emailCtrl.touched)}" />
                 </div>
-                <div *ngIf="emailCtrl.invalid && (emailCtrl.dirty || emailCtrl.touched)" class="text-[0.75rem] text-red-500 mt-1.5 font-medium pl-1">
+                <div *ngIf="emailCtrl.invalid && (emailCtrl.dirty || emailCtrl.touched)"
+                  class="text-[0.75rem] text-red-500 mt-1.5 font-medium pl-1">
                   <span *ngIf="emailCtrl.errors?.['required']">Email address is required.</span>
                   <span *ngIf="emailCtrl.errors?.['pattern']">Please enter a valid email address.</span>
                 </div>
@@ -177,8 +185,8 @@
                 <span class="form-field__icon">
                   <lucide-icon [img]="Building2" class="w-4 h-4"></lucide-icon>
                 </span>
-                <input type="text" placeholder="Acme Corp" name="company" [(ngModel)]="formData.company"
-                  maxlength="100" class="form-field__input" />
+                <input type="text" placeholder="Acme Corp" name="company" [(ngModel)]="formData.company" maxlength="100"
+                  class="form-field__input" />
               </div>
             </div>
 
@@ -194,14 +202,16 @@
                     <lucide-icon [img]="Briefcase" class="w-4 h-4"></lucide-icon>
                   </span>
                   <select name="projectType" [(ngModel)]="formData.projectType" #typeCtrl="ngModel" required
-                    class="form-field__select" [ngClass]="{'border-red-400 focus:border-red-500 focus:ring-red-100': typeCtrl.invalid && (typeCtrl.dirty || typeCtrl.touched)}">
+                    class="form-field__select"
+                    [ngClass]="{'border-red-400 focus:border-red-500 focus:ring-red-100': typeCtrl.invalid && (typeCtrl.dirty || typeCtrl.touched)}">
                     <option value="" disabled selected>Select project type...</option>
                     <option value="business-website">Business Website</option>
                     <option value="portfolio">Portfolio Website</option>
                     <option value="ecommerce">E-Commerce Website</option>
                     <option value="webapp">Web Application</option>
-                    <option value="software">Custom Software</option>
-                    <option value="uiux">UI/UX Design</option>
+                    <option value="admin-dashboard">Admin Dashboard</option>
+                    <option value="api-development">API Development</option>
+                    <option value="existing-project-enhancement">Existing Project Enhancement</option>
                     <option value="redesign">Website Redesign</option>
                     <option value="other">Other</option>
                   </select>
@@ -212,25 +222,28 @@
                     </svg>
                   </span>
                 </div>
-                <div *ngIf="typeCtrl.invalid && (typeCtrl.dirty || typeCtrl.touched)" class="text-[0.75rem] text-red-500 mt-1.5 font-medium pl-1">
+                <div *ngIf="typeCtrl.invalid && (typeCtrl.dirty || typeCtrl.touched)"
+                  class="text-[0.75rem] text-red-500 mt-1.5 font-medium pl-1">
                   Please select a project type.
                 </div>
               </div>
 
               <div class="form-field">
-                <label class="form-field__label">Estimated Budget <span class="text-red-500">*</span></label>
+                <label class="form-field__label">
+                  Estimated Budget
+                  <span class="form-field__optional">(Optional)</span>
+                </label>
                 <div class="form-field__select-wrap">
                   <span class="form-field__icon">
                     <lucide-icon [img]="IndianRupee" class="w-4 h-4"></lucide-icon>
                   </span>
-                  <select name="budget" [(ngModel)]="formData.budget" #budgetCtrl="ngModel" required
-                    class="form-field__select" [ngClass]="{'border-red-400 focus:border-red-500 focus:ring-red-100': budgetCtrl.invalid && (budgetCtrl.dirty || budgetCtrl.touched)}">
+                  <select name="budget" [(ngModel)]="formData.budget"
+                    class="form-field__select">
                     <option value="" disabled selected>Select budget range...</option>
-                    <option value="10k-25k">₹10k – ₹25k</option>
+                    <option value="under-25k">Under ₹25,000</option>
                     <option value="25k-50k">₹25k – ₹50k</option>
                     <option value="50k-1l">₹50k – ₹1L</option>
-                    <option value="1l-3l">₹1L – ₹3L</option>
-                    <option value="3l+">₹3L+</option>
+                    <option value="1l+">₹1L+</option>
                     <option value="discuss">Let's Discuss</option>
                   </select>
                   <span class="form-field__chevron">
@@ -240,22 +253,21 @@
                     </svg>
                   </span>
                 </div>
-                <div *ngIf="budgetCtrl.invalid && (budgetCtrl.dirty || budgetCtrl.touched)" class="text-[0.75rem] text-red-500 mt-1.5 font-medium pl-1">
-                  Please select an estimated budget.
-                </div>
               </div>
 
             </div>
 
             <!-- Timeline -->
             <div class="form-field">
-              <label class="form-field__label">When do you need this project? <span class="text-red-500">*</span></label>
+              <label class="form-field__label">When do you need this project? <span
+                  class="text-red-500">*</span></label>
               <div class="form-field__select-wrap">
                 <span class="form-field__icon">
                   <lucide-icon [img]="CalendarClock" class="w-4 h-4"></lucide-icon>
                 </span>
                 <select name="timeline" [(ngModel)]="formData.timeline" #timelineCtrl="ngModel" required
-                  class="form-field__select" [ngClass]="{'border-red-400 focus:border-red-500 focus:ring-red-100': timelineCtrl.invalid && (timelineCtrl.dirty || timelineCtrl.touched)}">
+                  class="form-field__select"
+                  [ngClass]="{'border-red-400 focus:border-red-500 focus:ring-red-100': timelineCtrl.invalid && (timelineCtrl.dirty || timelineCtrl.touched)}">
                   <option value="" disabled selected>Select timeline...</option>
                   <option value="asap">ASAP</option>
                   <option value="2weeks">Within 2 Weeks</option>
@@ -269,7 +281,8 @@
                   </svg>
                 </span>
               </div>
-              <div *ngIf="timelineCtrl.invalid && (timelineCtrl.dirty || timelineCtrl.touched)" class="text-[0.75rem] text-red-500 mt-1.5 font-medium pl-1">
+              <div *ngIf="timelineCtrl.invalid && (timelineCtrl.dirty || timelineCtrl.touched)"
+                class="text-[0.75rem] text-red-500 mt-1.5 font-medium pl-1">
                 Please select a timeline.
               </div>
             </div>
@@ -281,13 +294,17 @@
                 <span class="form-field__icon form-field__icon--textarea">
                   <lucide-icon [img]="FileText" class="w-4 h-4"></lucide-icon>
                 </span>
-                <textarea rows="5" name="details" [(ngModel)]="formData.details" #detailsCtrl="ngModel" required minlength="10"
-                  placeholder="Tell us about your goals, features, timeline, business requirements, and any reference websites you like."
-                  class="form-field__textarea" [ngClass]="{'border-red-400 focus:border-red-500 focus:ring-red-100': detailsCtrl.invalid && (detailsCtrl.dirty || detailsCtrl.touched)}"></textarea>
+                <textarea rows="5" name="details" [(ngModel)]="formData.details" #detailsCtrl="ngModel" required
+                  minlength="10"
+                  placeholder="Tell us about your project, your goals, and any features you'd like. If you have reference websites, feel free to include them too."
+                  class="form-field__textarea"
+                  [ngClass]="{'border-red-400 focus:border-red-500 focus:ring-red-100': detailsCtrl.invalid && (detailsCtrl.dirty || detailsCtrl.touched)}"></textarea>
               </div>
-              <div *ngIf="detailsCtrl.invalid && (detailsCtrl.dirty || detailsCtrl.touched)" class="text-[0.75rem] text-red-500 mt-1.5 font-medium pl-1">
+              <div *ngIf="detailsCtrl.invalid && (detailsCtrl.dirty || detailsCtrl.touched)"
+                class="text-[0.75rem] text-red-500 mt-1.5 font-medium pl-1">
                 <span *ngIf="detailsCtrl.errors?.['required']">Project details are required.</span>
-                <span *ngIf="detailsCtrl.errors?.['minlength']">Please provide a bit more detail (min 10 characters).</span>
+                <span *ngIf="detailsCtrl.errors?.['minlength']">Please provide a bit more detail (min 10
+                  characters).</span>
               </div>
             </div>
 
@@ -300,7 +317,7 @@
             <button type="submit" class="contact-submit-btn" [class.contact-submit-btn--loading]="isSubmitting"
               [disabled]="isSubmitting">
               <span *ngIf="!isSubmitting" class="flex items-center justify-center gap-2">
-                Get a Free Consultation
+                Send Project Details
                 <lucide-icon [img]="ArrowRight"
                   class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"></lucide-icon>
               </span>

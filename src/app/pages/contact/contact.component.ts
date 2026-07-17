@@ -107,7 +107,7 @@ export class ContactComponent implements OnInit {
         email: this.formData.email,
         company: this.formData.company || 'Not provided',
         projectType: this.formData.projectType,
-        budget: this.formData.budget,
+        budget: this.formData.budget || 'Not specified',
         timeline: this.formData.timeline,
         details: this.formData.details,
         'g-recaptcha-response': this.captchaToken

@@ -19,80 +19,83 @@ export class Faq {
   activeId = signal<number | null>(null);
   activeCategory = signal<string>('Process');
 
-  categories = ['Process', 'Pricing', 'Tech', 'Support'];
+  categories = ['Process', 'Pricing', 'Development', 'Support'];
 
   faqs: FaqItem[] = [
     {
       id: 1,
       category: 'Process',
       question: 'How does your development process work?',
-      answer: 'We follow an agile, milestone-based approach. Starting with a discovery call to understand your vision, we move into wireframing, then iterative development sprints with weekly demos so you always see real progress. You\'re never left in the dark — we\'re collaborators, not just vendors.',
+      answer: 'We begin by understanding your business goals and project requirements. Once the plan is finalized, we design, develop, test, and share regular updates throughout the project until everything is ready for launch.',
     },
     {
       id: 2,
       category: 'Process',
       question: 'How long does a typical project take?',
-      answer: 'Most projects land in the 4–12 week range depending on scope. A landing page or MVP can be live in as little as 2 weeks; a full-stack SaaS platform typically takes 8–14 weeks. We\'ll give you a precise timeline after the discovery phase.',
+      answer: 'The timeline depends on the project scope. A business website typically takes 2–4 weeks, while custom web applications may take 6–12 weeks. After our initial discussion, we will provide a clear project timeline.',
     },
-    {
-      id: 3,
-      category: 'Pricing',
-      question: 'How do you price your services?',
-      answer: 'We offer two models: fixed-price for well-defined projects (no surprise invoices) and a monthly retainer for ongoing development or product teams that need a reliable dev partner. All quotes are transparent — you see exactly what you\'re paying for.',
-    },
+    // {
+    //   id: 3,
+    //   category: 'Process',
+    //   question: 'Can you sign an NDA before we discuss our idea?',
+    //   answer: 'Yes. We are happy to sign a Non-Disclosure Agreement (NDA) before discussing your project to ensure your ideas and business information remain confidential.',
+    // },
+
     {
       id: 4,
       category: 'Pricing',
-      question: 'Do you offer any payment plans or installments?',
-      answer: 'Yes. We typically structure payments in 3 milestones: 30% upfront, 40% at mid-point delivery, and 30% on final handoff. For retainer engagements, billing is monthly. We\'re flexible and happy to discuss arrangements that work for your cash flow.',
+      question: 'How do you price your services?',
+      answer: 'Every project is different, so pricing depends on the features, complexity, and timeline. After understanding your requirements, we provide a clear and transparent quote with no hidden costs.',
     },
     {
       id: 5,
       category: 'Pricing',
-      question: 'What is the minimum budget you work with?',
-      answer: 'Our minimum project engagement starts at ₹25,000 / $300 for smaller scopes. For ongoing retainers, the minimum is ₹40,000/month. We believe great software is an investment, and we ensure the ROI justifies every rupee.',
+      question: 'Do you offer payment milestones?',
+      answer: 'Yes. Most projects are divided into milestones with payments linked to project progress. This keeps the process transparent and comfortable for both sides.',
     },
     {
       id: 6,
-      category: 'Tech',
-      question: 'What technologies and stacks do you specialize in?',
-      answer: 'We\'re full-stack engineers with deep expertise in Angular, React, Next.js, Node.js, NestJS, and cloud platforms (AWS, GCP). For mobile, we use Flutter and React Native. We choose the right tool for the job — not the fashionable one.',
+      category: 'Pricing',
+      question: 'Do you provide a free project consultation?',
+      answer: 'Yes. We offer a free consultation to understand your requirements, discuss possible solutions, and answer your questions before starting the project.',
     },
+
     {
       id: 7,
-      category: 'Tech',
-      question: 'Will I own the source code after the project?',
-      answer: '100%. Upon final payment, you receive full intellectual property rights to all source code, assets, and documentation. We also hand over a clean GitHub repository with a proper README so any developer can maintain it going forward.',
+      category: 'Development',
+      question: 'What technologies do you use?',
+      answer: 'We primarily build modern websites and web applications using Angular, Node.js, Express.js, SQL, and related technologies. We always choose the tools that best fit your project requirements.',
     },
     {
       id: 8,
-      category: 'Tech',
-      question: 'Can you work with our existing codebase?',
-      answer: 'Absolutely. Legacy modernization and codebase takeovers are one of our specialties. We do a thorough code audit first, flag technical debt, and propose a migration or refactor plan before touching anything.'
+      category: 'Development',
+      question: 'Will I own the source code after the project?',
+      answer: 'Yes. Once the project is completed and the final payment is made, you will receive full ownership of the source code, project files, and related assets.',
     },
     {
       id: 9,
-      category: 'Support',
-      question: 'Do you provide post-launch support and maintenance?',
-      answer: 'Every project includes a 30-day bug-fix warranty at no extra cost. After that, we offer monthly maintenance retainers covering security patches, dependency updates, performance monitoring, and feature iterations. You\'re never abandoned after launch.',
+      category: 'Development',
+      question: 'Can you work on an existing website or web application?',
+      answer: 'Absolutely. Whether you need new features, bug fixes, performance improvements, or a complete redesign, we can work with your existing project.',
     },
+
     {
       id: 10,
       category: 'Support',
-      question: 'How do we communicate during the project?',
-      answer: 'We set up a dedicated Slack channel (or Discord, WhatsApp — your preference) from day one. You\'ll also get access to a live project board on Notion or Linear so you can track every task in real time. Weekly video syncs are standard.',
+      question: 'Do you provide support after the project is completed?',
+      answer: 'Yes. We provide post-launch support to fix issues, make updates, and help keep your website or web application running smoothly. Ongoing maintenance plans are also available if needed.',
     },
     {
       id: 11,
-      category: 'Process',
-      question: 'Can you sign an NDA before we discuss our idea?',
-      answer: 'Absolutely, without hesitation. Confidentiality is a professional standard for us. We\'ll send you a mutual NDA before any detailed conversations. Your idea is safe with us.',
+      category: 'Support',
+      question: 'How do we communicate during the project?',
+      answer: 'We keep communication simple and transparent. We provide regular progress updates and are available through email, phone, or your preferred communication platform.',
     },
     {
       id: 12,
       category: 'Support',
-      question: 'What if I\'m not happy with the final output?',
-      answer: 'We work iteratively with regular feedback loops, so surprises at the end are extremely rare. That said, if something doesn\'t meet the agreed spec, we fix it — no arguments, no extra charges. Client satisfaction isn\'t a slogan; it\'s our reputation.',
+      question: 'What if I need changes after the project is delivered?',
+      answer: 'No problem. We understand that requirements can evolve. We are happy to help with additional improvements, new features, or updates even after the project has been completed.',
     }
   ];
 

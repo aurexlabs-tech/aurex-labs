@@ -13,23 +13,23 @@ import * as AOS from 'aos';
 export class ProcessComponent implements OnInit {
   readonly steps = [
     {
-      title: 'Discover & Architect',
-      description: 'We analyze your business requirements, define technical constraints, and architect a scalable database and system foundation.',
+      title: 'Discover & Plan',
+      description: 'We start by understanding your business, goals, and project requirements so we can recommend the best solution.',
       icon: Search
     },
     {
       title: 'Design & Prototype',
-      description: 'Creating high-fidelity UI/UX wireframes and interactive prototypes, ensuring the platform is intuitive before coding begins.',
+      description: 'We create wireframes and design concepts to give you a clear vision of your website or application before development begins.',
       icon: PenTool
     },
     {
-      title: 'Develop & Iterate',
-      description: 'Agile engineering using Angular and Node.js. We build robust APIs, secure backends, and responsive frontend interfaces.',
+      title: 'Develop & Test',
+      description: 'We build your project using modern technologies while keeping you updated with regular progress throughout development.',
       icon: Code
     },
     {
-      title: 'Deploy & Scale',
-      description: 'Rigorous testing followed by seamless deployment. We provide ongoing support to ensure your product scales with your users.',
+      title: 'Launch & Support',
+      description: 'After thorough testing, we launch your project and continue to provide support, updates, and improvements whenever you need them.',
       icon: Rocket
     }
   ];

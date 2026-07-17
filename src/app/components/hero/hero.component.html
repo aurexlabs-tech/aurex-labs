@@ -16,53 +16,82 @@
           <span class="hero-badge__ping"></span>
           <span class="hero-badge__dot"></span>
         </span>
-        <span class="hero-badge__text">Elite Engineering Duo</span>
+        <span class="hero-badge__text">Helping Businesses Grow Online</span>
       </div>
 
       <!-- Headline -->
       <h1 class="hero-title">
-        High-Performance<br />
-        Platforms Built<br />
-        <span class="hero-title__accent font-serif italic">for Growth.</span>
+        We Build Fast, Modern Web Solutions That<br />
+        <span class="hero-title__accent font-serif italic">Grow Your Business.</span>
       </h1>
 
       <!-- Description -->
       <p class="hero-description">
-        Helping startups and businesses build scalable web applications,
-        automation systems, and AI-powered solutions with enterprise-grade engineering.
+        From business websites to custom web applications, we build solutions that are fast, reliable, and designed
+        around your business needs.
       </p>
 
       <!-- CTA Buttons -->
       <div class="hero-actions">
         <a routerLink="/contact" class="hero-btn hero-btn--primary">
           <span>Start Your Project</span>
-          <svg class="hero-btn__arrow" fill="none" stroke="currentColor" stroke-width="2.5"
-            stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <svg class="hero-btn__arrow" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round" viewBox="0 0 24 24">
             <path d="M5 12h14" />
             <path d="m12 5 7 7-7 7" />
           </svg>
         </a>
-        <a routerLink="/work" class="hero-btn hero-btn--secondary">
+        <!-- <a routerLink="/work" class="hero-btn hero-btn--secondary">
           View Case Studies
-        </a>
+        </a> -->
       </div>
 
 
       <!-- Stats strip -->
-      <div class="hero-stats">
+      <div class="hero-stats" data-aos="fade-up" data-aos-delay="200">
         <div class="hero-stat">
-          <div class="hero-stat__value">20+</div>
-          <div class="hero-stat__label">Projects Delivered</div>
+          <div class="hero-stat__icon-wrap hero-stat__icon-wrap--blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+          </div>
+          <div class="hero-stat__content">
+            <div class="hero-stat__value">Client-Focused</div>
+            <div class="hero-stat__label">Development Approach</div>
+          </div>
         </div>
-        <div class="hero-stat__divider"></div>
+
         <div class="hero-stat">
-          <div class="hero-stat__value">24h</div>
-          <div class="hero-stat__label">Response Time</div>
+          <div class="hero-stat__icon-wrap hero-stat__icon-wrap--emerald">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+              stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+          </div>
+          <div class="hero-stat__content">
+            <div class="hero-stat__value">24 Hours</div>
+            <div class="hero-stat__label">Average Response Time</div>
+          </div>
         </div>
-        <div class="hero-stat__divider"></div>
+
         <div class="hero-stat">
-          <div class="hero-stat__value">100%</div>
-          <div class="hero-stat__label">Responsive Solutions</div>
+          <div class="hero-stat__icon-wrap hero-stat__icon-wrap--violet">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+              <line x1="12" y1="2" x2="12" y2="22" />
+            </svg>
+          </div>
+          <div class="hero-stat__content">
+            <div class="hero-stat__value">Modern</div>
+            <div class="hero-stat__label">Web Technologies</div>
+          </div>
         </div>
       </div>
 
@@ -78,52 +107,53 @@
       <div class="arch-diagram">
 
         <!-- SVG connector lines (drawn first, behind cards) -->
-        <svg class="arch-connectors" viewBox="0 0 460 520" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <svg class="arch-connectors" viewBox="0 0 460 520" fill="none" xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true">
           <!-- Top: Web Apps → Hub -->
-          <line x1="100" y1="110" x2="200" y2="200" class="arch-line arch-line--1"/>
+          <line x1="100" y1="110" x2="200" y2="200" class="arch-line arch-line--1" />
           <!-- Top: API Services → Hub -->
-          <line x1="360" y1="110" x2="260" y2="200" class="arch-line arch-line--2"/>
+          <line x1="360" y1="110" x2="260" y2="200" class="arch-line arch-line--2" />
           <!-- Left: Cloud → Hub -->
-          <line x1="60"  y1="280" x2="178" y2="260" class="arch-line arch-line--3"/>
+          <line x1="60" y1="280" x2="178" y2="260" class="arch-line arch-line--3" />
           <!-- Right: AI → Hub -->
-          <line x1="400" y1="280" x2="282" y2="260" class="arch-line arch-line--4"/>
+          <line x1="400" y1="280" x2="282" y2="260" class="arch-line arch-line--4" />
           <!-- Bottom: Analytics → Hub -->
-          <line x1="230" y1="430" x2="230" y2="320" class="arch-line arch-line--5"/>
+          <line x1="230" y1="430" x2="230" y2="320" class="arch-line arch-line--5" />
 
           <!-- Animated travel dots -->
           <circle r="3" class="arch-travel arch-travel--1">
             <animateMotion dur="2.8s" repeatCount="indefinite" begin="0s">
-              <mpath href="#path1"/>
+              <mpath href="#path1" />
             </animateMotion>
           </circle>
           <circle r="3" class="arch-travel arch-travel--2">
             <animateMotion dur="3.2s" repeatCount="indefinite" begin="0.6s">
-              <mpath href="#path2"/>
+              <mpath href="#path2" />
             </animateMotion>
           </circle>
           <circle r="3" class="arch-travel arch-travel--3">
             <animateMotion dur="2.5s" repeatCount="indefinite" begin="1.2s">
-              <mpath href="#path3"/>
+              <mpath href="#path3" />
             </animateMotion>
           </circle>
           <circle r="3" class="arch-travel arch-travel--4">
             <animateMotion dur="3.5s" repeatCount="indefinite" begin="0.3s">
-              <mpath href="#path4"/>
+              <mpath href="#path4" />
             </animateMotion>
           </circle>
           <circle r="3" class="arch-travel arch-travel--5">
             <animateMotion dur="2.2s" repeatCount="indefinite" begin="1.8s">
-              <mpath href="#path5"/>
+              <mpath href="#path5" />
             </animateMotion>
           </circle>
 
           <!-- Hidden motion paths -->
           <defs>
-            <path id="path1" d="M 100 110 L 200 200"/>
-            <path id="path2" d="M 360 110 L 260 200"/>
-            <path id="path3" d="M 60 280 L 178 260"/>
-            <path id="path4" d="M 400 280 L 282 260"/>
-            <path id="path5" d="M 230 430 L 230 320"/>
+            <path id="path1" d="M 100 110 L 200 200" />
+            <path id="path2" d="M 360 110 L 260 200" />
+            <path id="path3" d="M 60 280 L 178 260" />
+            <path id="path4" d="M 400 280 L 282 260" />
+            <path id="path5" d="M 230 430 L 230 320" />
           </defs>
         </svg>
 
@@ -134,13 +164,14 @@
           <div class="arch-hub__card">
             <div class="arch-hub__icon">
               <!-- layers icon -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
-                <polyline points="2 17 12 22 22 17"/>
-                <polyline points="2 12 12 17 22 12"/>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                <polyline points="2 17 12 22 22 17" />
+                <polyline points="2 12 12 17 22 12" />
               </svg>
             </div>
-            <div class="arch-hub__label">Modern Web<br/>Platform</div>
+            <div class="arch-hub__label">Custom Web <br /> Solutions</div>
           </div>
         </div>
 
@@ -149,66 +180,78 @@
         <!-- Web Applications — top-left -->
         <div class="arch-node arch-node--webapp">
           <div class="arch-node__icon arch-node__icon--blue">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="3" width="20" height="14" rx="2"/>
-              <path d="M8 21h8M12 17v4"/>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" />
+              <path d="M8 21h8M12 17v4" />
             </svg>
           </div>
-          <div class="arch-node__text">Web<br/>Applications</div>
+          <div class="arch-node__text">Web<br />Applications</div>
           <div class="arch-node__pulse" aria-hidden="true"></div>
         </div>
 
         <!-- API Services — top-right -->
         <div class="arch-node arch-node--api">
           <div class="arch-node__icon arch-node__icon--violet">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 20V10M12 20V4M6 20v-6"/>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M18 20V10M12 20V4M6 20v-6" />
             </svg>
           </div>
-          <div class="arch-node__text">API<br/>Services</div>
+          <div class="arch-node__text">API<br />Services</div>
           <div class="arch-node__pulse" aria-hidden="true"></div>
         </div>
 
-        <!-- Cloud Infrastructure — left -->
+        <!-- Responsive Design — left -->
         <div class="arch-node arch-node--cloud">
           <div class="arch-node__icon arch-node__icon--sky">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+              stroke-linejoin="round">
+              <!-- Monitor -->
+              <rect x="2" y="3" width="14" height="10" rx="1.5" />
+              <path d="M6 17h4M8 13v4" />
+              <!-- Smartphone -->
+              <rect x="15" y="8" width="7" height="12" rx="1.5" />
+              <line x1="18.5" y1="17" x2="18.5" y2="17.01" />
             </svg>
           </div>
-          <div class="arch-node__text">Cloud<br/>Infrastructure</div>
+          <div class="arch-node__text">Responsive <br /> Design</div>
           <div class="arch-node__pulse" aria-hidden="true"></div>
         </div>
 
         <!-- AI Integrations — right -->
         <div class="arch-node arch-node--ai">
           <div class="arch-node__icon arch-node__icon--emerald">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z"/>
-              <path d="M18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 0 0-2.455 2.456Z"/>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z" />
+              <path
+                d="M18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 0 0-2.455 2.456Z" />
             </svg>
           </div>
-          <div class="arch-node__text">AI<br/>Integrations</div>
+          <div class="arch-node__text">AI<br />Integrations</div>
           <div class="arch-node__pulse" aria-hidden="true"></div>
         </div>
 
         <!-- Analytics — bottom -->
         <div class="arch-node arch-node--analytics">
           <div class="arch-node__icon arch-node__icon--amber">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 3v18h18"/>
-              <path d="m19 9-5 5-4-4-3 3"/>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M3 3v18h18" />
+              <path d="m19 9-5 5-4-4-3 3" />
             </svg>
           </div>
-          <div class="arch-node__text">Analytics<br/>Dashboard</div>
+          <div class="arch-node__text">Analytics<br />Dashboard</div>
           <div class="arch-node__pulse" aria-hidden="true"></div>
         </div>
 
         <!-- Floating status chip — inside diagram so it's never clipped -->
-        <div class="arch-status-chip">
+        <!-- <div class="arch-status-chip">
           <span class="arch-status-chip__dot"></span>
           <span>All Systems Operational</span>
-        </div>
+        </div> -->
 
       </div><!-- /arch-diagram -->
 
