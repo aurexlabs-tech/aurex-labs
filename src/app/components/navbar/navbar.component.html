@@ -40,17 +40,19 @@
     <button
       class="md:hidden relative w-10 h-10 mr-1 flex items-center justify-center rounded-full hover:bg-blue-50 transition-colors"
       (click)="toggleMobileMenu()" [attr.aria-expanded]="mobileMenuOpen" aria-label="Toggle navigation menu">
-      <div class="flex flex-col gap-[6px] w-5">
-        <span class="block h-[2px] bg-slate-800 rounded-full transition-all duration-300 origin-center"
-          [style.transform]="mobileMenuOpen ? 'rotate(45deg) translateY(4px)' : ''">
-        </span>
-        <span class="block h-[2px] bg-slate-800 rounded-full transition-all duration-300"
-          [style.opacity]="mobileMenuOpen ? '0' : '1'">
-        </span>
-        <span class="block h-[2px] bg-slate-800 rounded-full transition-all duration-300 origin-center"
-          [style.transform]="mobileMenuOpen ? 'rotate(-45deg) translateY(-4px)' : ''">
-        </span>
-      </div>
+      <!-- Hamburger icon (shown when menu is closed) -->
+      <svg *ngIf="!mobileMenuOpen" class="w-5 h-5 text-slate-800" fill="none" stroke="currentColor" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+        <line x1="4" y1="6" x2="20" y2="6" />
+        <line x1="4" y1="12" x2="20" y2="12" />
+        <line x1="4" y1="18" x2="20" y2="18" />
+      </svg>
+      <!-- Close (X) icon (shown when menu is open) -->
+      <svg *ngIf="mobileMenuOpen" class="w-6 h-6 text-slate-800" fill="none" stroke="currentColor" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+        <line x1="6" y1="6" x2="18" y2="18" />
+        <line x1="6" y1="18" x2="18" y2="6" />
+      </svg>
     </button>
   </div>
 
