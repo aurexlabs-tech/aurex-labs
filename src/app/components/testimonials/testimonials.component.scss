@@ -14,22 +14,21 @@
 
 .badge {
   border-radius: 9999px;
-  background-color: #ffffff;
-  border: 1px solid #dbeafe;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  background-color: #EFF6FF;
+  border: 1px solid #DBEAFE;
+}
 
-  .badge-dot {
-    border-radius: 9999px;
-    background-color: #2563EB;
-  }
+.badge-dot {
+  border-radius: 9999px;
+  background-color: #2563EB;
+}
 
-  .badge-text {
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: #2563eb;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-  }
+.badge-text {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #2563EB !important;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
 }
 
 .section-title {

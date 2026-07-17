@@ -7,14 +7,6 @@
 
   <div class="max-w-[1200px] mx-auto px-10 md:px-12 relative z-10">
 
-    <!-- Section Header -->
-    <!-- <div data-aos="fade-up" class="text-center mb-16">
-      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-blue-100 shadow-sm mb-6">
-        <div class="w-2 h-2 rounded-full bg-[#2563EB] animate-pulse"></div>
-        <span class="text-xs font-bold text-[#2563EB] uppercase tracking-[0.18em]">Available for New Projects</span>
-      </div>
-    </div> -->
-
     <!-- Two-column Layout -->
     <div class="contact-grid">
 
@@ -24,11 +16,6 @@
         <!-- Illustration -->
         <div class="contact-illustration-wrapper">
           <img src="contact-hero.svg" alt="Web development workspace illustration" class="contact-illustration" />
-          <!-- Floating badge -->
-          <!-- <div class="contact-badge-available">
-            <div class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
-            <span>Available for Projects</span>
-          </div> -->
         </div>
 
         <div class="flex flex-col gap-4">
@@ -237,8 +224,7 @@
                   <span class="form-field__icon">
                     <lucide-icon [img]="IndianRupee" class="w-4 h-4"></lucide-icon>
                   </span>
-                  <select name="budget" [(ngModel)]="formData.budget"
-                    class="form-field__select">
+                  <select name="budget" [(ngModel)]="formData.budget" class="form-field__select">
                     <option value="" disabled selected>Select budget range...</option>
                     <option value="under-25k">Under ₹25,000</option>
                     <option value="25k-50k">₹25k – ₹50k</option>
@@ -326,14 +312,6 @@
                 Sending your brief...
               </span>
             </button>
-
-            <!-- Response Time Note -->
-            <!-- <p class="contact-response-note">
-              <lucide-icon [img]="Clock" class="w-3.5 h-3.5 inline-block mr-1 text-[#2563EB]"></lucide-icon>
-              Average response time: <strong>under 24 hours</strong>
-            </p> -->
-
-
           </form>
         </div>
       </div>
