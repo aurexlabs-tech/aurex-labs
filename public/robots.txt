@@ -1,0 +1,8 @@
+# robots.txt – AurexLabs
+# https://aurexlabs.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://aurexlabs.com/sitemap.xml
